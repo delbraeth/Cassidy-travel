@@ -436,20 +436,8 @@ img{max-width:100%}
   document.getElementById("today-date").textContent = today.toLocaleDateString("en-US", {weekday:"long", month:"long", day:"numeric", year:"numeric"});
 
   /* sales */
-  var SALES = [
-    {brand:"Sandals Resorts", title:"Extra 7% off in the 7-7-7 sale", end:"2026-10-20",
-     terms:"Book by Oct 20, 2026. Supplier terms apply.",
-     why:"Adults-only all-inclusive: meals, drinks and activities are covered, so there's little to plan once you arrive. Need an accessible room? Several Sandals resorts have roll-in showers, but only a few rooms each, so ask early."},
-    {brand:"Carnival Cruise Line", title:"FunPacks add-on bundles", end:"2026-10-30",
-     terms:"Purchase by Oct 30, 2026, for sailings Oct 31, 2026 through Dec 31, 2027.",
-     why:"Settling add-ons before you sail makes the family budget easier and means fewer decisions on board."},
-    {brand:"Princess Cruises", title:"Early Booking Bonus on 2028–29 sailings", start:"2026-10-27", end:"2027-02-16",
-     terms:"Runs Oct 27, 2026 through Feb 16, 2027.",
-     why:"New itineraries have the widest choice of cabins on opening day, including connecting cabins for families and the few accessible ones."},
-    {brand:"Royal Caribbean", title:"Europe 2028–29 sailings now open",
-     terms:"New itineraries released October 2026.",
-     why:"The best cabins on new Europe itineraries go early. I can hold one while you decide on the rest."}
-  ];
+  var live = [];
+  function renderSales(SALES){
   function status(s){
     if (s.start && daysUntil(s.start) > 0){ var a = daysUntil(s.start); return {label:"Opens in", n:String(a), unit:a===1?"day":"days", order:2, sort:a}; }
     if (s.end){ var b = daysUntil(s.end); if (b < 0) return null;
@@ -457,7 +445,7 @@ img{max-width:100%}
       return {label:"Ends in", n:String(b), unit:b===1?"day":"days", order:1, sort:b}; }
     return {label:"Now open", n:"Open", unit:"", order:3, sort:0};
   }
-  var live = SALES.map(function(s){ return {s:s, st:status(s)}; }).filter(function(x){ return x.st; })
+  live = SALES.map(function(s){ return {s:s, st:status(s)}; }).filter(function(x){ return x.st; })
     .sort(function(a,b){ return a.st.order - b.st.order || a.st.sort - b.st.sort; });
   var board = document.getElementById("board");
   live.forEach(function(x){
@@ -482,6 +470,7 @@ img{max-width:100%}
         el.textContent = r;
       }, 60);
     });
+  }
   }
 
   /* tips */
@@ -692,21 +681,30 @@ img{max-width:100%}
   });
 
   /* today card, by weekday */
+  function renderToday(){
   var THEMES = ["Weekend reading","No-Fly Monday","Tip Tuesday","Sales roundup","Plan-ahead Thursday","Ohio weekend","Weekend reading"];
   var h = document.getElementById("today-h"), body = document.getElementById("today-body"), link = document.getElementById("today-link");
   document.getElementById("today-theme").textContent = "Today · " + THEMES[dow];
-  if (dow === 1){ var bd = DEST[8]; h.textContent = "Cruise from Baltimore, no flight needed"; body.textContent = bd.note; link.href = "#drive"; link.textContent = "See drive-time rings"; }
+  if (dow === 1){ var bd = DEST.filter(function(d){ return d.id === "balt"; })[0]; h.textContent = "Cruise from Baltimore, no flight needed"; body.textContent = bd.note; link.href = "#drive"; link.textContent = "See drive-time rings"; }
   else if (dow === 2){ h.textContent = "Today's tip"; body.textContent = TIPS[(doy+1) % TIPS.length]; link.href = "#finder"; link.textContent = "Browse the resort finder"; }
   else if (dow === 3){
     var nLive = live.filter(function(x){ return x.st.order <= 1 || x.st.order === 3; }).length, nSoon = live.filter(function(x){ return x.st.order === 2; }).length;
     var next = live.filter(function(x){ return x.st.order <= 1; })[0];
-    h.textContent = nLive + " offers running, " + nSoon + " opening soon";
-    body.textContent = next ? (next.s.brand + ": " + next.s.title.toLowerCase().replace(/^./, function(c){return c;}) + ". " + (next.st.n === "Today" ? "Ends today." : "Ends in " + next.st.n + " " + next.st.unit + ".")) : "See what's on the board this week.";
+    h.textContent = live.length ? nLive + (nLive === 1 ? " offer" : " offers") + " running, " + nSoon + " opening soon" : "New offers are on the way";
+    body.textContent = next ? (next.s.brand + ": " + next.s.title.toLowerCase().replace(/^./, function(c){return c;}) + ". " + (next.st.n === "Today" ? "Ends today." : "Ends in " + next.st.n + " " + next.st.unit + ".")) : "Ask me what's on sale for your dates.";
     link.href = "#sales"; link.textContent = "See the sales board";
   }
   else if (dow === 4){ var sc = SEASON[today.getMonth()][0]; h.textContent = sc.t; body.textContent = sc.b; link.href = "#seasonal"; link.textContent = "See this month's plan-ahead list"; }
   else if (dow === 5){ var near = DEST.filter(function(d){ return d.ring === 0; }); var pickD = near[Math.floor(doy/7) % near.length]; h.textContent = "This weekend: " + pickD.name; body.textContent = pickD.note; link.href = "#drive"; link.textContent = "More trips under 90 minutes"; }
   else { h.textContent = "Booking a cabin for the whole family"; body.textContent = "Ask for photos of the entry, the bedrooms and the parking area, and count the stairs. Grandparents, toddlers and anyone with a mobility need will thank you."; link.href = "#drive"; link.textContent = "See drive trips"; }
+  }
+
+  /* offers come from offers.json, synced from the Notion "Website feed" database */
+  fetch("offers.json?v=" + Date.now(), {cache: "no-store"})
+    .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(d){ renderSales(d.offers || []); })
+    .catch(function(){ renderSales([]); })
+    .then(renderToday);
 })();
 </script>
 </body>

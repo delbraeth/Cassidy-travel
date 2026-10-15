@@ -1,0 +1,32 @@
+{
+  "offers": [
+    {
+      "brand": "Sandals Resorts",
+      "title": "Extra 7% off in the 7-7-7 sale",
+      "terms": "Book by Oct 20, 2026. Supplier terms apply.",
+      "why": "Adults-only all-inclusive: meals, drinks and activities are covered, so there's little to plan once you arrive. Need an accessible room? Several Sandals resorts have roll-in showers, but only a few rooms each, so ask early.",
+      "end": "2026-10-20"
+    },
+    {
+      "brand": "Carnival Cruise Line",
+      "title": "FunPacks add-on bundles",
+      "terms": "Purchase by Oct 30, 2026, for sailings Oct 31, 2026 through Dec 31, 2027.",
+      "why": "Settling add-ons before you sail makes the family budget easier and means fewer decisions on board.",
+      "end": "2026-10-30"
+    },
+    {
+      "brand": "Princess Cruises",
+      "title": "Early Booking Bonus on 2028–29 sailings",
+      "terms": "Runs Oct 27, 2026 through Feb 16, 2027.",
+      "why": "New itineraries have the widest choice of cabins on opening day, including connecting cabins for families and the few accessible ones.",
+      "start": "2026-10-27",
+      "end": "2027-02-16"
+    },
+    {
+      "brand": "Royal Caribbean",
+      "title": "Europe 2028–29 sailings now open",
+      "terms": "New itineraries released October 2026.",
+      "why": "The best cabins on new Europe itineraries go early. I can hold one while you decide on the rest."
+    }
+  ]
+}
