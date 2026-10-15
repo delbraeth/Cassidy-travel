@@ -80,7 +80,7 @@ p{margin:0}
 .hero .wrap>div{position:relative;z-index:1}
 #sales,#drive,#finder{background:var(--bg-alt)}
 #favorites{background:var(--sun-soft)}
-.fav-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.fav-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:18px}
 .fav{background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:12px}
 .fav h3{font-size:var(--step-2)}
 .fav .where{font-family:var(--f-display);font-weight:700;color:var(--ink-soft);font-size:.9rem}
@@ -287,7 +287,7 @@ img{max-width:100%}
       <div class="sec-head">
         <p class="eyebrow">Southwest Ohio favorites</p>
         <h2 id="fav-h">Where Waynesville families keep going back</h2>
-        <p>Three trips I plan most often, with how to get there, when to go, and what to know before you book.</p>
+        <p>Four trips I plan most often, with how to get there, when to go, and what to know before you book.</p>
       </div>
       <div class="fav-grid">
         <article class="fav">
@@ -307,6 +307,15 @@ img{max-width:100%}
             <div><dt>Good to know</dt><dd>Big lake houses suit extended families, and summer weekends fill by spring. Many houseboats board by ladder or a steep ramp, so I ask for photos first. A fully accessible fishing dock opened in 2026 at the Davis Cemetery Access Area in Campbell County.</dd></div>
           </dl>
           <a class="btn" href="https://secure.foratravel.com/intake/AOaJHvy4Ll" target="_blank" rel="noopener">Plan a lake trip</a>
+        </article>
+        <article class="fav">
+          <div><h3>Gatlinburg &amp; Pigeon Forge</h3><p class="where">Tennessee's Smoky Mountains</p></div>
+          <dl>
+            <div><dt>Getting there</dt><dd>About 5 hours by car.</dd></div>
+            <div><dt>When to go</dt><dd>October for fall color. From early November to mid-February, Winterfest lights up Gatlinburg, Pigeon Forge and Sevierville, and Dollywood runs its Christmas season.</dd></div>
+            <div><dt>Good to know</dt><dd>Many cabins have steps or steep drives, so I ask for photos of the entry, bathroom and parking. Dollywood publishes accessibility guides, and its DreamMore and HeartSong resorts have accessible rooms, some with roll-in showers. In the national park, the paved half-mile Sugarlands Valley Nature Trail is the accessible trail, and the park lends an all-terrain wheelchair.</dd></div>
+          </dl>
+          <a class="btn" href="https://secure.foratravel.com/intake/AOaJHvy4Ll" target="_blank" rel="noopener">Plan a mountain trip</a>
         </article>
         <article class="fav">
           <div><h3>Disney World &amp; Orlando</h3><p class="where">Central Florida</p></div>
@@ -574,7 +583,8 @@ img{max-width:100%}
     9:[{t:"Hold summer 2027 Alaska cabins now",b:"Summer Alaska sailings sell early, especially balcony, connecting and accessible cabins. Hold one now and choose excursions later.",n:["Cruise","Multi-gen"]},
        {t:"Holiday events with quiet hours",b:"Some parks and attractions add sensory-friendly sessions in December. Plan your dates around them before booking.",n:["Sensory","Family"]}],
     10:[{t:"Plan Ohio spring break now",b:"Ohio districts set their own spring breaks. Check yours, then book flights and accessible rooms around it.",n:["Ohio","Family"]},
-        {t:"A trip as a gift",b:"A planned trip makes a good gift for grandparents. Start with a date and a place; the details can come later.",n:["Multi-gen"]}],
+        {t:"A trip as a gift",b:"A planned trip makes a good gift for grandparents. Start with a date and a place; the details can come later.",n:["Multi-gen"]},
+        {t:"Smoky Mountain Winterfest",b:"Gatlinburg, Pigeon Forge and Sevierville light up from early November to mid-February. Book step-free cabins early; they go first.",n:["Drive trip","Multi-gen"]}],
     11:[{t:"Winter break escapes",b:"Nonstop flights mean no missed connections. Look for seasonal nonstops from Dayton (DAY), Cincinnati (CVG), Columbus (CMH) and Indianapolis (IND).",n:["Ohio"]},
         {t:"Wave season starts soon",b:"Cruise lines release their biggest offers from January. Decide on dates now so you're ready.",n:["Cruise"]}]
   };
@@ -614,7 +624,7 @@ img{max-width:100%}
     {id:"cle", name:"Cleveland", ring:2, ang:43, time:"About 3 hr 45 min", note:"The Rock & Roll Hall of Fame, the lakefront, and the Cleveland Museum of Art, where general admission is always free (some special exhibitions cost extra). Small-ship Great Lakes cruises call here during the season, which opened in late April this year."},
     {id:"chi", name:"Chicago", ring:2, ang:311, time:"About 4 hr 45 min", note:"A big-city weekend: museums, Navy Pier and the Lakefront Trail, which is paved end to end. Navy Pier publishes an accessibility map and lends wheelchairs while they last. Many 'L' train stations have elevators but not all, so check station accessibility before you plan routes."},
     {id:"norris", name:"Norris Lake", ring:2, ang:166, time:"About 4 hours", note:"East Tennessee lake country: houseboats, lake houses for big families, and coves to swim in. Many houseboats board by ladder or a steep ramp, so ask for photos. A fully accessible fishing dock opened in 2026 at the Davis Cemetery Access Area in Campbell County."},
-    {id:"smokies", name:"Gatlinburg", ring:2, ang:188, time:"About 5 hours", note:"Mountain town with steep roads. Many cabins listed as accessible still have a step or a sloped drive. Ask for photos of the entry, the bathroom and the parking spot. Dollywood publishes accessibility guides for its parks, and its DreamMore and HeartSong resorts have accessible rooms, some with roll-in showers."},
+    {id:"smokies", name:"Gatlinburg", ring:2, ang:188, time:"About 5 hours", note:"Mountain town with steep roads. Many cabins listed as accessible still have a step or a sloped drive. Ask for photos of the entry, the bathroom and the parking spot. Dollywood publishes accessibility guides for its parks, and its DreamMore and HeartSong resorts have accessible rooms, some with roll-in showers. In the national park, the paved Sugarlands Valley Nature Trail is the accessible trail."},
     {id:"myrtle", name:"Myrtle Beach", ring:3, ang:145, time:"About 9 hr 30 min", note:"The Grand Strand: condo resorts with lazy rivers and kitchens for three generations. Myrtle Beach approved free beach wheelchairs in 2026, and North Myrtle Beach has a ramp, mat and loaner chairs at 46th Avenue South. Prefer to fly? Allegiant has nonstops from Cincinnati and seasonal ones from Dayton."},
     {id:"balt", name:"Baltimore", ring:3, ang:92, time:"About 8 hours", note:"The closest cruise port by car. Carnival sails from here year-round, and Royal Caribbean is scheduled to return for a summer 2027 season. No flight to catch and no baggage limits, and if you travel with a wheelchair it never goes in a cargo hold."},
     {id:"nynj", name:"New York / NJ", ring:3, ang:66, time:"About 10 hours", note:"Manhattan, Brooklyn and Cape Liberty terminals. A long drive, but the widest choice of ships and itineraries."},
