@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cassidy Travel: cruises, resorts, theme parks and family getaways planned from Waynesville, Ohio, with a focus on accessible and multi-generational travel.">
+<title>Cassidy Travel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+<style>
+/* Layout: wayfinding-sign clarity. Plain one-column sections, one bold object (the dark departures board for sales). */
+:root{
+  --bg:#F3F6F7; --surface:#FFFFFF; --ink:#112A3A; --ink-soft:#4C6271; --rule:#D3DDE2;
+  --lake:#0A6782; --lake-soft:#E0EEF2; --on-lake:#FFFFFF;
+  --board:#13252F; --board-ink:#F2CF73; --board-text:#EEF2F4; --board-dim:#93A8B2; --board-rule:#2A3E49;
+  --good:#2C7A4B; --good-soft:#E3F1E8; --warn:#8E5708; --warn-soft:#F7ECD9;
+  --note:#7A4B00; --note-bg:#FFF4DA;
+  --f-display:"Bricolage Grotesque","Atkinson Hyperlegible",system-ui,sans-serif;
+  --f-body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"Atkinson Hyperlegible Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --step--1:.9rem; --step-0:1.0625rem; --step-1:1.25rem; --step-2:1.6rem; --step-3:clamp(1.8rem,3.4vw,2.3rem); --step-4:clamp(2.3rem,5.4vw,3.7rem);
+  --radius:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0C171D; --surface:#13222A; --ink:#E3ECF0; --ink-soft:#9BB0BB; --rule:#253842;
+    --lake:#62BCD7; --lake-soft:#173440; --on-lake:#06222C;
+    --board:#071116; --board-ink:#F2CF73; --board-text:#E6EDF0; --board-dim:#82979F; --board-rule:#1E3039;
+    --good:#78C898; --good-soft:#16301F; --warn:#E6B566; --warn-soft:#33270F;
+    --note:#F0C774; --note-bg:#2A2210;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0C171D; --surface:#13222A; --ink:#E3ECF0; --ink-soft:#9BB0BB; --rule:#253842;
+  --lake:#62BCD7; --lake-soft:#173440; --on-lake:#06222C;
+  --board:#071116; --board-ink:#F2CF73; --board-text:#E6EDF0; --board-dim:#82979F; --board-rule:#1E3039;
+  --good:#78C898; --good-soft:#16301F; --warn:#E6B566; --warn-soft:#33270F;
+  --note:#F0C774; --note-bg:#2A2210;
+  color-scheme:dark;
+}
+:root[data-large]{font-size:118%}
+:root:not([data-calm]){scroll-behavior:smooth}
+:root[data-calm] *{animation:none!important;transition:none!important}
+:root[data-calm]{--board-ink:#D9C48E}
+
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:var(--step-0);line-height:1.6}
+a{color:var(--lake)}
+:focus-visible{outline:3px solid var(--lake);outline-offset:2px;border-radius:4px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.12}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:16px;top:16px;background:var(--surface);padding:8px 12px;z-index:10}
+.eyebrow{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--lake)}
+
+/* prototype strip */
+.proto{background:var(--note-bg);color:var(--note);font-size:var(--step--1)}
+.proto .wrap{padding-block:8px}
+
+/* header */
+.head .wrap{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between;padding-block:18px}
+.mark{display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}
+.mark b{font-family:var(--f-display);font-weight:800;font-size:1.6rem;letter-spacing:-.02em;line-height:1}
+.mark span{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
+.nav{display:flex;flex-wrap:wrap;gap:4px 18px;list-style:none;margin:0;padding:0}
+.nav a{color:var(--ink-soft);text-decoration:none;font-weight:700;font-size:var(--step--1)}
+.nav a:hover{color:var(--lake)}
+.toggles{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font:inherit;font-size:.85rem;color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:6px 13px;cursor:pointer}
+.pill[aria-pressed="true"]{background:var(--lake);color:var(--on-lake);border-color:var(--lake)}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:44px;padding-block:36px 60px;align-items:start}
+.hero h1{font-size:var(--step-4);font-weight:800;letter-spacing:-.025em;margin-top:10px;max-width:15ch}
+.lede{font-size:var(--step-1);color:var(--ink-soft);max-width:48ch;margin-top:18px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;margin-top:26px}
+.btn{display:inline-block;background:var(--lake);color:var(--on-lake);font-weight:700;text-decoration:none;padding:12px 20px;border-radius:8px;border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.cred-line{margin-top:26px;font-family:var(--f-mono);font-size:.8rem;color:var(--ink-soft);letter-spacing:.02em}
+.today{background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);padding:24px;display:grid;gap:18px}
+.today h2{font-size:var(--step-2);margin-top:6px}
+.today .body{color:var(--ink-soft);margin-top:8px}
+.today .more{font-weight:700;display:inline-block;margin-top:10px}
+.tipbox{border-top:1px solid var(--rule);padding-top:16px}
+.tipbox p{margin-top:6px}
+.stamp{font-size:.82rem;color:var(--ink-soft)}
+
+/* sections */
+section.block{border-top:1px solid var(--rule)}
+section.block>.wrap{padding-block:56px}
+.sec-head{display:grid;gap:10px;margin-bottom:28px;max-width:64ch}
+.sec-head h2{font-size:var(--step-3);font-weight:800;letter-spacing:-.015em}
+.sec-head p{color:var(--ink-soft)}
+
+/* departures board */
+.board{background:var(--board);color:var(--board-text);border-radius:12px;list-style:none;margin:0;padding:0}
+.board li{display:grid;grid-template-columns:9.5rem minmax(0,1fr) minmax(0,1.1fr);gap:12px 28px;padding:20px 22px;border-top:1px solid var(--board-rule)}
+.board li:first-child{border-top:0}
+.board .hdr{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--board-dim);padding-block:14px}
+.when{display:flex;flex-direction:column;font-family:var(--f-mono)}
+.when-label{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--board-dim)}
+.count{font-size:2rem;font-weight:600;color:var(--board-ink);line-height:1.15;font-variant-numeric:tabular-nums}
+.when-unit{font-size:.8rem;color:var(--board-dim)}
+.what{display:flex;flex-direction:column;gap:4px;min-width:0}
+.brand{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--board-ink)}
+.what .title{font-family:var(--f-display);font-weight:600;font-size:var(--step-1);line-height:1.25}
+.terms{font-size:.85rem;color:var(--board-dim)}
+.why{min-width:0;font-size:.97rem}
+.why-label{display:block;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--board-dim);margin-bottom:4px}
+.board-foot{font-size:.88rem;color:var(--ink-soft);margin-top:14px;max-width:70ch}
+@media (max-width:760px){
+  .board li{grid-template-columns:1fr;gap:10px}
+  .board .hdr{display:none}
+  .when{flex-direction:row;align-items:baseline;gap:8px}
+}
+
+/* seasonal */
+.months{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;margin-bottom:22px}
+.mbtn{flex:0 0 auto;font-family:var(--f-mono);font-size:.85rem;background:var(--surface);color:var(--ink);border:1px solid var(--rule);border-radius:8px;padding:8px 12px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:4.2rem}
+.mbtn small{font-size:.68rem;color:var(--ink-soft);letter-spacing:.06em;text-transform:uppercase}
+.mbtn[aria-pressed="true"]{background:var(--lake);border-color:var(--lake);color:var(--on-lake)}
+.mbtn[aria-pressed="true"] small{color:var(--on-lake)}
+.season-title{font-family:var(--f-display);font-size:var(--step-1);margin-bottom:14px}
+.cards2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media (max-width:700px){.cards2{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:8px}
+.card h3{font-size:var(--step-1)}
+.card p{color:var(--ink-soft)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.04em;background:var(--lake-soft);color:var(--ink);border-radius:999px;padding:3px 10px}
+
+/* drive rings */
+.drive{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px;align-items:start}
+@media (max-width:860px){.drive{grid-template-columns:1fr}}
+.rings{position:relative;width:100%;max-width:520px;aspect-ratio:1/1;margin-inline:auto}
+.ring{position:absolute;left:50%;top:50%;border:1.5px dashed var(--rule);border-radius:50%;transform:translate(-50%,-50%)}
+.ring-label{position:absolute;left:50%;transform:translate(-50%,-50%);font-family:var(--f-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);background:var(--bg);padding:0 6px;white-space:nowrap}
+.home{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:2px;font-family:var(--f-mono);font-size:.7rem;color:var(--ink-soft);text-align:center}
+.home i{width:14px;height:14px;border-radius:50%;background:var(--ink);display:block}
+.dest{position:absolute;transform:translate(-50%,-50%);background:none;border:0;padding:4px;cursor:pointer;display:flex;align-items:center;gap:5px;font:inherit;font-size:.78rem;font-weight:700;color:var(--ink);white-space:nowrap}
+.dest i{width:12px;height:12px;border-radius:50%;background:var(--surface);border:2.5px solid var(--lake);flex:0 0 auto}
+.dest.left{flex-direction:row-reverse}
+.dest[aria-pressed="true"] i{background:var(--lake)}
+.dest[aria-pressed="true"] span{color:var(--lake)}
+.ring-groups{display:grid;gap:16px}
+.ring-groups h3{font-family:var(--f-mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+.gbtns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.drive-detail{margin-top:20px}
+.verify{font-family:var(--f-mono);font-size:.72rem;color:var(--warn);background:var(--warn-soft);border-radius:999px;padding:3px 10px;align-self:flex-start}
+
+/* finder */
+.filters{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;border:1px solid var(--rule);border-radius:var(--radius);padding:14px 18px;margin:0 0 14px;background:var(--surface)}
+.filters legend{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);padding:0 6px}
+.filters label{display:flex;align-items:center;gap:8px;cursor:pointer}
+.filters input[type=checkbox]{width:1.1rem;height:1.1rem;accent-color:var(--lake)}
+.filters select{font:inherit;padding:4px 8px;border-radius:6px;border:1px solid var(--rule);background:var(--bg);color:var(--ink)}
+.count-line{color:var(--ink-soft);font-size:.92rem;margin-bottom:16px}
+.results{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.rcard{background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:10px}
+.rcard h3{font-size:1.15rem}
+.rmeta{font-family:var(--f-mono);font-size:.75rem;color:var(--ink-soft);letter-spacing:.03em}
+.verdict{align-self:flex-start;font-size:.78rem;font-weight:700;border-radius:999px;padding:3px 10px}
+.verdict.top{background:var(--good-soft);color:var(--good)}
+.verdict.plan{background:var(--warn-soft);color:var(--warn)}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:3px 14px;margin:0;font-size:.9rem}
+.facts dt{color:var(--ink-soft)}
+.facts dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums}
+.rcard p{font-size:.92rem;color:var(--ink-soft)}
+.empty{padding:24px;border:1px dashed var(--rule);border-radius:var(--radius);color:var(--ink-soft)}
+
+/* quiz */
+.quiz{display:grid;gap:18px;max-width:780px}
+.quiz fieldset{border:0;padding:0;margin:0}
+.quiz legend{font-weight:700;margin-bottom:8px;font-size:var(--step-1);font-family:var(--f-display)}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts input{position:absolute;opacity:0;width:1px;height:1px}
+.opts label{border:1px solid var(--rule);background:var(--surface);border-radius:999px;padding:8px 15px;cursor:pointer}
+.opts input:checked+label{background:var(--lake);color:var(--on-lake);border-color:var(--lake)}
+.opts input:focus-visible+label{outline:3px solid var(--lake);outline-offset:2px}
+.qresult{background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);padding:22px;max-width:780px;margin-top:22px;display:grid;gap:10px}
+.qresult h3{font-size:var(--step-2)}
+.qresult p{color:var(--ink-soft)}
+.qerr{color:var(--warn);font-weight:700}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px}
+@media (max-width:860px){.about{grid-template-columns:1fr;gap:32px}}
+.bio p{font-size:var(--step-1);line-height:1.55;max-width:46ch}
+.bio p+p{margin-top:16px}
+.cred-group+.cred-group{margin-top:22px}
+.cred-group h3{font-family:var(--f-mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.creds{list-style:none;margin:0;padding:0}
+.creds li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 14px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.cname{font-weight:700}
+.cmeta{grid-column:1;font-size:.88rem;color:var(--ink-soft)}
+
+/* footer */
+.foot{border-top:1px solid var(--rule)}
+.foot .wrap{padding-block:36px 48px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px;font-size:.92rem;color:var(--ink-soft)}
+@media (max-width:760px){.foot .wrap{grid-template-columns:1fr}}
+.affil{display:flex;flex-wrap:wrap;align-items:center;gap:12px;color:var(--ink);font-weight:700}
+
+
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:32px;padding-block:24px 44px}
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="proto" role="note"><div class="wrap">Preview site. Some details are still being confirmed, and every trip detail is checked with the supplier before you book.</div></div>
+
+<header class="head">
+  <div class="wrap">
+    <a class="mark" href="#top" id="top"><b>Cassidy Travel</b><span>Cruises · Resorts · Family and group travel</span></a>
+    <nav aria-label="Sections"><ul class="nav">
+      <li><a href="#sales">Sales</a></li>
+      <li><a href="#seasonal">Plan ahead</a></li>
+      <li><a href="#drive">Drive trips</a></li>
+      <li><a href="#quiz">Trip match</a></li>
+      <li><a href="#finder">Accessible resorts</a></li>
+      <li><a href="#about">About</a></li>
+    </ul></nav>
+    <div class="toggles" aria-label="Display options">
+      <button class="pill" id="t-calm" type="button" aria-pressed="false">Calm mode</button>
+      <button class="pill" id="t-large" type="button" aria-pressed="false">Larger text</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow" id="today-date">Today</p>
+        <h1 id="hero-h">Trips planned around the details that matter.</h1>
+        <p class="lede">Cruises, resorts, theme parks and family getaways, planned from Waynesville, Ohio. Traveling with grandparents, little kids, or someone who needs an accessible room? That's where I do my best work.</p>
+        <div class="cta-row">
+          <a class="btn" href="https://www.foratravel.com/advisor/patrick-cassidy" target="_blank" rel="noopener">Start planning with Patrick</a>
+          <a href="#quiz">Not sure where to start? Take the trip match</a>
+        </div>
+        <p class="cred-line">Trained and certified with Carnival, Royal Caribbean, Princess, Viking, Sandals and more · Certified Autism Travel Professional</p>
+      </div>
+      <aside class="today" aria-labelledby="today-h">
+        <div>
+          <p class="eyebrow" id="today-theme">Today</p>
+          <h2 id="today-h">Loading today's feature</h2>
+          <p class="body" id="today-body"></p>
+          <a class="more" id="today-link" href="#sales">See more</a>
+        </div>
+        <div class="tipbox">
+          <p class="eyebrow">Tip of the day</p>
+          <p id="tip-text"></p>
+        </div>
+        <p class="stamp">Updated daily. Every item is reviewed by Patrick before it's posted.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block" id="sales" aria-labelledby="sales-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Last call</p>
+        <h2 id="sales-h">Offers worth knowing about</h2>
+        <p>Current offers from cruise lines and resorts, with the deadline up front and a note on who each one suits.</p>
+      </div>
+      <ul class="board" id="board" aria-label="Current offers">
+        <li class="hdr" aria-hidden="true"><span>Deadline</span><span>Offer</span><span>Why it matters</span></li>
+      </ul>
+      <p class="board-foot">Terms, dates and availability are set by each cruise line or resort and can change. I'll confirm the current terms before you book.</p>
+    </div>
+  </section>
+
+  <section class="block" id="seasonal" aria-labelledby="season-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Plan ahead</p>
+        <h2 id="season-h">What to book now, and for when</h2>
+        <p>The best rooms and cabins go first, from connecting rooms for families to accessible ones. Here's what to lock in each month, with Ohio school calendars and our home airports in mind: Dayton (DAY), Cincinnati (CVG), Columbus (CMH) and Indianapolis (IND).</p>
+      </div>
+      <div class="months" id="months" aria-label="Choose a month"></div>
+      <p class="season-title" id="season-title"></p>
+      <div class="cards2" id="season-cards"></div>
+    </div>
+  </section>
+
+  <section class="block" id="drive" aria-labelledby="drive-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Road trips</p>
+        <h2 id="drive-h">How far can you go by car?</h2>
+        <p>No airports, no baggage limits, and the trip starts in your driveway. Pick a ring to see ideas by drive time from Waynesville.</p>
+      </div>
+      <div class="drive">
+        <div class="rings" id="rings" aria-label="Drive-time map">
+          <div class="home"><i></i><span id="home-label">Home</span></div>
+        </div>
+        <div>
+          <div class="ring-groups" id="ring-groups"></div>
+          <div class="card drive-detail" id="drive-detail" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="quiz" aria-labelledby="quiz-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Trip match</p>
+        <h2 id="quiz-h">What kind of trip fits your crew?</h2>
+        <p>Four quick questions. You'll get a starting idea, and we can talk through the details.</p>
+      </div>
+      <form class="quiz" id="quiz-form" novalidate>
+        <fieldset><legend>Who's traveling?</legend><div class="opts" id="q-who"></div></fieldset>
+        <fieldset><legend>What matters most?</legend><div class="opts" id="q-need"></div></fieldset>
+        <fieldset><legend>How far are you willing to go?</legend><div class="opts" id="q-far"></div></fieldset>
+        <fieldset><legend>What pace suits you?</legend><div class="opts" id="q-pace"></div></fieldset>
+        <div><button class="btn" type="submit">See my trip idea</button></div>
+      </form>
+      <div id="q-out" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="block" id="finder" aria-labelledby="finder-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Accessible resort finder</p>
+        <h2 id="finder-h">Sandals and Beaches resorts for wheelchair users</h2>
+        <p>Based on Sandals' own accessibility sheet (February 2025). I confirm room details with the resort's Special Services team before every booking.</p>
+      </div>
+      <fieldset class="filters">
+        <legend>Filter</legend>
+        <label for="f-rollin"><input type="checkbox" id="f-rollin"> Roll-in shower</label>
+        <label for="f-family"><input type="checkbox" id="f-family"> Kids welcome</label>
+        <label for="f-autism"><input type="checkbox" id="f-autism"> Certified Autism Center</label>
+        <label for="f-transfer">Airport transfer
+          <select id="f-transfer">
+            <option value="999">Any length</option>
+            <option value="30">30 min or less</option>
+            <option value="60">1 hour or less</option>
+            <option value="90">90 min or less</option>
+          </select>
+        </label>
+      </fieldset>
+      <p class="count-line" id="count-line" aria-live="polite"></p>
+      <div class="results" id="results"></div>
+    </div>
+  </section>
+
+  <section class="block" id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">About</p>
+        <h2 id="about-h">Patrick Cassidy</h2>
+      </div>
+      <div class="about">
+        <div class="bio">
+          <p>I'm Patrick Cassidy, an independent travel advisor in Waynesville, Ohio. I plan cruises, resort stays, theme park trips and family getaways. My specialty is the trips with more moving parts: three generations on one vacation, families with young kids, teams on the road, and travelers who need an accessible room or a calmer pace.</p>
+          <p>I spent years directing US Paralympic swim meets, and I travel with a power wheelchair myself. So I ask the questions a brochure skips, then I confirm the answers before you book.</p>
+        </div>
+        <div>
+          <div class="cred-group">
+            <h3>Cruise</h3>
+            <ul class="creds">
+              <li><span class="cname">Carnival Expert, Diamond Level Graduate</span><span class="cmeta">Carnival Cruise Line · 2026</span></li>
+              <li><span class="cname">Master of Adventure</span><span class="cmeta">Royal Caribbean University · 2026</span></li>
+              <li><span class="cname">Celebrity Learning Scholar</span><span class="cmeta">Celebrity Cruises · 2026</span></li>
+              <li><span class="cname">Princess Academy Commodore</span><span class="cmeta">Princess Cruises · 2026</span></li>
+              <li><span class="cname">Viking Certified Expert: rivers, oceans and expeditions</span><span class="cmeta">Viking · 2026</span></li>
+            </ul>
+          </div>
+          <div class="cred-group">
+            <h3>Resorts and parks</h3>
+            <ul class="creds">
+              <li><span class="cname">Completed Sandals Elite Advisor training</span><span class="cmeta">Sandals and Beaches Resorts · 2026</span></li>
+              <li><span class="cname">Universal Orlando Resort Specialist and Universal Studios Hollywood Specialist</span><span class="cmeta">UniversalandU · 2026</span></li>
+            </ul>
+          </div>
+          <div class="cred-group">
+            <h3>Accessibility and autism</h3>
+            <ul class="creds">
+              <li><span class="cname">Certified Autism Travel Professional (CATP)</span><span class="cmeta">IBCCES · Credential CATP26431292 · valid through 2028</span></li>
+              <li><span class="cname">Certified Accessible Travel Advocate (CATA)</span><span class="cmeta">Special Needs Group · 2026</span></li>
+            </ul>
+          </div>
+          <div class="cred-group">
+            <h3>Host agency</h3>
+            <ul class="creds">
+              <li><span class="cname">Certified travel advisor</span><span class="cmeta">Fora Travel · 2026 · <a href="https://www.foratravel.com/certification?credential=53e318b0-926c-4953-b778-8c7833af9f55" target="_blank" rel="noopener">Verify credential</a></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <p class="affil">Cassidy Travel, independent travel advisor of Fora Travel</p>
+      <p style="margin-top:10px">Offers are subject to each supplier's terms and availability. Accessibility details are confirmed with the resort or cruise line before booking.</p>
+    </div>
+    <div>
+      <p>Ready to plan a trip?</p>
+      <p style="margin-top:10px"><a class="btn" href="https://www.foratravel.com/advisor/patrick-cassidy" target="_blank" rel="noopener">Start planning with Patrick</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var FORA = "https://www.foratravel.com/advisor/patrick-cassidy";
+  var store = {
+    get: function(k){ try { return localStorage.getItem(k); } catch(e){ return null; } },
+    set: function(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+  };
+
+  /* display toggles */
+  var reduce = false;
+  try { reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch(e){}
+  function setFlag(n, on, save){
+    if (on) root.setAttribute("data-"+n, ""); else root.removeAttribute("data-"+n);
+    document.getElementById("t-"+n).setAttribute("aria-pressed", on ? "true" : "false");
+    if (save) store.set("ct-"+n, on ? "1" : "0");
+  }
+  ["calm","large"].forEach(function(n){
+    var s = store.get("ct-"+n);
+    setFlag(n, s === null ? (n === "calm" ? reduce : false) : s === "1", false);
+    document.getElementById("t-"+n).addEventListener("click", function(){ setFlag(n, !root.hasAttribute("data-"+n), true); });
+  });
+
+  /* dates */
+  var now = new Date();
+  var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  function parse(s){ var p = s.split("-").map(Number); return new Date(p[0], p[1]-1, p[2]); }
+  function daysUntil(s){ return Math.round((parse(s) - today) / 86400000); }
+  document.getElementById("today-date").textContent = today.toLocaleDateString("en-US", {weekday:"long", month:"long", day:"numeric", year:"numeric"});
+
+  /* sales */
+  var SALES = [
+    {brand:"Sandals Resorts", title:"Extra 7% off in the 7-7-7 sale", end:"2026-10-20",
+     terms:"Book by Oct 20, 2026. Supplier terms apply.",
+     why:"Adults-only all-inclusive: meals, drinks and activities are covered, so there's little to plan once you arrive. Need an accessible room? Several Sandals resorts have roll-in showers, but only a few rooms each, so ask early."},
+    {brand:"Carnival Cruise Line", title:"FunPacks add-on bundles", end:"2026-10-30",
+     terms:"Purchase by Oct 30, 2026, for sailings Oct 31, 2026 through Dec 31, 2027.",
+     why:"Settling add-ons before you sail makes the family budget easier and means fewer decisions on board."},
+    {brand:"Princess Cruises", title:"Early Booking Bonus on 2028–29 sailings", start:"2026-10-27", end:"2027-02-16",
+     terms:"Runs Oct 27, 2026 through Feb 16, 2027.",
+     why:"New itineraries have the widest choice of cabins on opening day, including connecting cabins for families and the few accessible ones."},
+    {brand:"Royal Caribbean", title:"Europe 2028–29 sailings now open",
+     terms:"New itineraries released October 2026.",
+     why:"The best cabins on new Europe itineraries go early. I can hold one while you decide on the rest."}
+  ];
+  function status(s){
+    if (s.start && daysUntil(s.start) > 0){ var a = daysUntil(s.start); return {label:"Opens in", n:String(a), unit:a===1?"day":"days", order:2, sort:a}; }
+    if (s.end){ var b = daysUntil(s.end); if (b < 0) return null;
+      if (b === 0) return {label:"Last day", n:"Today", unit:"", order:0, sort:0};
+      return {label:"Ends in", n:String(b), unit:b===1?"day":"days", order:1, sort:b}; }
+    return {label:"Now open", n:"Open", unit:"", order:3, sort:0};
+  }
+  var live = SALES.map(function(s){ return {s:s, st:status(s)}; }).filter(function(x){ return x.st; })
+    .sort(function(a,b){ return a.st.order - b.st.order || a.st.sort - b.st.sort; });
+  var board = document.getElementById("board");
+  live.forEach(function(x){
+    var li = document.createElement("li");
+    li.innerHTML =
+      '<div class="when"><span class="when-label">'+x.st.label+'</span><span class="count"'+(/^\d+$/.test(x.st.n)?' data-num':'')+'>'+x.st.n+'</span><span class="when-unit">'+x.st.unit+'</span></div>'+
+      '<div class="what"><span class="brand">'+x.s.brand+'</span><span class="title">'+x.s.title+'</span><span class="terms">'+x.s.terms+'</span></div>'+
+      '<div class="why"><span class="why-label">Why it matters</span>'+x.s.why+'</div>';
+    board.appendChild(li);
+  });
+  if (!live.length){
+    var e = document.createElement("li"); e.innerHTML = '<div class="what" style="grid-column:1/-1"><span class="title">No offers running right now. Check back tomorrow.</span></div>'; board.appendChild(e);
+  }
+  /* split-flap settle, once on load */
+  if (!root.hasAttribute("data-calm")){
+    Array.prototype.forEach.call(document.querySelectorAll(".count[data-num]"), function(el, i){
+      var final = el.textContent, t = 0;
+      var id = setInterval(function(){
+        t++;
+        if (t > 7 + i*3 || root.hasAttribute("data-calm")){ clearInterval(id); el.textContent = final; return; }
+        var r = ""; for (var k=0;k<final.length;k++) r += Math.floor(Math.random()*10);
+        el.textContent = r;
+      }, 60);
+    });
+  }
+
+  /* tips */
+  var TIPS = [
+    "For a cruise, fly into the port city the day before. A delayed flight shouldn't cost you the trip.",
+    "Check passport expiration dates now. Many countries want at least six months left on your passport when you arrive.",
+    "Planning for three generations? Pick a home base with an elevator and a short walk to the pool. Grandparents and toddlers both benefit.",
+    "Ask for bathroom details in inches, not the word \"accessible.\" Door width, shower entry and grab-bar placement tell you more than a label.",
+    "Popular shore excursions sell out. Book the ones you care about as soon as your cruise line opens them.",
+    "Renting a scooter or wheelchair for a cruise? Special Needs Group can deliver it to your stateroom, so it's waiting when you board.",
+    "Traveling with little kids? Book connecting rooms or a suite instead of one crowded room. Everyone sleeps better.",
+    "Beaches Negril and Beaches Turks & Caicos are Advanced Certified Autism Centers, with kids camp staff trained through IBCCES.",
+    "Take a photo of your bags and of what's packed inside before you check them. It speeds up any lost-luggage claim.",
+    "For a child who needs predictability, make a picture schedule of travel day: car, airport, security, plane, hotel.",
+    "At a big all-inclusive, ask how far your room is from the main pool and restaurants. On large resorts, the walk adds up.",
+    "Check what your travel insurance covers before you buy: cancellation, medical care away from home, and any equipment you travel with."
+  ];
+  var doy = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+  var tipToday = TIPS[doy % TIPS.length];
+  document.getElementById("tip-text").textContent = tipToday;
+
+  /* seasonal */
+  var SEASON = {
+    0:[{t:"Wave season is here",b:"January through March is when cruise lines release their biggest offers. Watch the sales board.",n:["Cruise"]},
+       {t:"Quieter weeks at the Orlando parks",b:"Weeks without school breaks are calmer, with shorter lines for everyone.",n:["Family"]}],
+    1:[{t:"Last call for spring break",b:"Rooms and flights for spring break dates are going fast. Lock yours in this month.",n:["Family"]},
+       {t:"Summer family reunions",b:"Book connecting or adjoining rooms early. Large groups need them more than anyone.",n:["Multi-gen"]}],
+    2:[{t:"Summer cruises with the grandparents",b:"Pick ships with plenty of elevators and a calm adults' area, then book cabins close to them.",n:["Multi-gen","Cruise"]},
+       {t:"Insurance before storm season",b:"Buy travel insurance before summer Caribbean trips, and make sure it covers any medical equipment you bring.",n:["Caribbean"]}],
+    3:[{t:"Great Lakes cruises from Cleveland",b:"Small ships call at Cleveland in summer. Cabins on these small ships are limited, so ask now.",n:["Ohio","Cruise"]},
+       {t:"Summer at the Orlando theme parks",b:"Book dining, and any accessibility services you need, as early as each park allows.",n:["Family","Sensory"]}],
+    4:[{t:"Adaptive sports travel season",b:"Summer tournaments mean team travel. Lock in a room block near the venue early, with accessible rooms inside it if your team needs them.",n:["Adaptive sports"]},
+       {t:"Drive-to cruise ports",b:"Baltimore is about eight hours from Waynesville. No flight to catch, and you can pack what you like.",n:["Ohio","Cruise"]}],
+    5:[{t:"What hurricane season means",b:"Atlantic hurricane season runs June 1 through November 30. Flexible bookings and good insurance matter more now.",n:["Caribbean"]},
+       {t:"Plan around the heat",b:"Midday heat is hard on many travelers. Schedule outdoor time for mornings.",n:["Multi-gen"]}],
+    6:[{t:"Fall break planning",b:"Ohio districts set their own fall breaks. Check yours before you book.",n:["Ohio","Family"]},
+       {t:"Holiday sailings",b:"Accessible cabins on Thanksgiving and December sailings go early.",n:["Cruise"]}],
+    7:[{t:"Fall at the Orlando parks",b:"Fall weekdays are often calmer once schools are back in session.",n:["Sensory","Family"]},
+       {t:"Smoky Mountains color",b:"Fall color usually peaks in October. Book accessible lodging in the mountains now.",n:["Drive trip"]}],
+    8:[{t:"Next summer's cabins",b:"Alaska and Europe for next summer open up. The best cabins go first.",n:["Cruise"]},
+       {t:"Holiday events with quiet hours",b:"Some attractions add sensory-friendly sessions in December. Plan around those dates.",n:["Sensory"]}],
+    9:[{t:"Hold summer 2027 Alaska cabins now",b:"Summer Alaska sailings sell early, especially balcony, connecting and accessible cabins. Hold one now and choose excursions later.",n:["Cruise","Multi-gen"]},
+       {t:"Holiday events with quiet hours",b:"Some parks and attractions add sensory-friendly sessions in December. Plan your dates around them before booking.",n:["Sensory","Family"]}],
+    10:[{t:"Plan Ohio spring break now",b:"Ohio districts set their own spring breaks. Check yours, then book flights and accessible rooms around it.",n:["Ohio","Family"]},
+        {t:"A trip as a gift",b:"A planned trip makes a good gift for grandparents. Start with a date and a place; the details can come later.",n:["Multi-gen"]}],
+    11:[{t:"Winter break escapes",b:"Nonstop flights mean no missed connections. Look for seasonal nonstops from Dayton (DAY), Cincinnati (CVG), Columbus (CMH) and Indianapolis (IND).",n:["Ohio"]},
+        {t:"Wave season starts soon",b:"Cruise lines release their biggest offers from January. Decide on dates now so you're ready.",n:["Cruise"]}]
+  };
+  var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var monthsEl = document.getElementById("months");
+  var selMonth = today.getMonth();
+  function renderSeason(){
+    Array.prototype.forEach.call(monthsEl.children, function(b){ b.setAttribute("aria-pressed", Number(b.dataset.m) === selMonth ? "true" : "false"); });
+    document.getElementById("season-title").textContent = (selMonth === today.getMonth() ? "This month: " : "") + MONTHS[selMonth];
+    document.getElementById("season-cards").innerHTML = SEASON[selMonth].map(function(c){
+      return '<article class="card"><h3>'+c.t+'</h3><p>'+c.b+'</p><div class="tags">'+c.n.map(function(x){return '<span class="tag">'+x+'</span>';}).join("")+'</div></article>';
+    }).join("");
+  }
+  for (var i=0;i<12;i++){
+    var d = new Date(today.getFullYear(), today.getMonth()+i, 1);
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "mbtn"; b.dataset.m = d.getMonth();
+    b.innerHTML = MONTHS[d.getMonth()].slice(0,3) + '<small>' + (i===0 ? "Now" : d.getFullYear()) + '</small>';
+    b.addEventListener("click", function(){ selMonth = Number(this.dataset.m); renderSeason(); });
+    monthsEl.appendChild(b);
+  }
+  renderSeason();
+
+  /* drive rings, centered on Waynesville */
+  var RINGS = [{r:.26, label:"Under 90 minutes"},{r:.50, label:"About 2 to 3 hours"},{r:.72, label:"About 5 hours"},{r:.94, label:"8 to 10 hours: cruise ports"}];
+  var DEST = [
+    {id:"caesar", name:"Caesar Creek", ring:0, ang:115, time:"About 10 min", note:"Caesar Creek State Park: lake, beach, campground and trails right next door. Ask the park office which paths and beach areas are paved before you go."},
+    {id:"dayton", name:"Dayton", ring:0, ang:330, time:"About 35 min", note:"The National Museum of the U.S. Air Force is free, indoors, flat and huge. A good rainy-day pick for mixed ages."},
+    {id:"mason", name:"Kings Island", ring:0, ang:238, time:"About 30 min", note:"Kings Island and the waterpark resorts in Mason. Check the park's accessibility guide and ride access policy before you go."},
+    {id:"cincy", name:"Cincinnati", ring:0, ang:200, time:"About 50 min", note:"Zoo, riverfront parks, and the aquarium across the river in Newport. Ask each attraction about sensory bags and quiet rooms."},
+    {id:"cbus", name:"Columbus", ring:0, ang:63, time:"About 1 hr 15 min", note:"Zoo, the COSI science center, and a flat, walkable downtown. Ask about sensory-friendly hours when you plan your dates."},
+    {id:"sandusky", name:"Sandusky", ring:1, ang:35, time:"About 2 hr 45 min", note:"Indoor waterpark resorts for winter weekends. Kalahari is reported to be an IBCCES Certified Autism Center; confirm before booking."},
+    {id:"hocking", name:"Hocking Hills", ring:1, ang:95, time:"About 2 hr 15 min", note:"Cabins, caves and forest. Ash Cave is reported to have a paved trail suitable for wheelchairs. Cabin entries vary a lot, so ask for photos."},
+    {id:"lex", name:"Lexington", ring:1, ang:170, time:"About 1 hr 50 min", note:"Horse farm tours. Ask each farm about ground surfaces, since gravel and grass are common."},
+    {id:"louisville", name:"Louisville", ring:1, ang:225, time:"About 2 hours", note:"Riverfront, museums and the Kentucky Derby Museum. Hotels fill early in Derby season."},
+    {id:"indy", name:"Indianapolis", ring:1, ang:279, time:"About 2 hours", note:"Flat downtown, a very large children's museum, and many hotels with accessible rooms near the convention center."},
+    {id:"smokies", name:"Gatlinburg", ring:2, ang:185, time:"About 5 hours", note:"Mountain town with steep roads. Many cabins listed as accessible still have a step or a sloped drive. Ask for photos of the entry, the bathroom and the parking spot. Dollywood publishes an accessibility guide."},
+    {id:"balt", name:"Baltimore", ring:3, ang:92, time:"About 8 hours", note:"The closest cruise port by car. No flight to catch and no baggage limits, and if you travel with a wheelchair it never goes in a cargo hold. Check which ships sail from here each season."},
+    {id:"nynj", name:"New York / NJ", ring:3, ang:66, time:"About 10 hours", note:"Manhattan, Brooklyn and Cape Liberty terminals. A long drive, but the widest choice of ships and itineraries."},
+    {id:"norfolk", name:"Norfolk", ring:3, ang:118, time:"About 9 hr 30 min", note:"Seasonal sailings from Norfolk, Virginia. The schedule changes each year."}
+  ];
+  document.getElementById("home-label").textContent = "Home: Waynesville";
+  var ringsEl = document.getElementById("rings");
+  RINGS.forEach(function(rg){
+    var c = document.createElement("div"); c.className = "ring";
+    c.style.width = (rg.r*100)+"%"; c.style.height = (rg.r*100)+"%";
+    ringsEl.appendChild(c);
+    var l = document.createElement("span"); l.className = "ring-label"; l.textContent = rg.label;
+    l.style.top = (50 - rg.r*50)+"%"; ringsEl.appendChild(l);
+  });
+  var dots = {}, chips = {};
+  DEST.forEach(function(dst){
+    var rad = dst.ang * Math.PI/180, r = RINGS[dst.ring].r;
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "dest" + (dst.ang > 180 ? " left" : "");
+    b.style.left = (50 + Math.sin(rad)*r*50)+"%"; b.style.top = (50 - Math.cos(rad)*r*50)+"%";
+    b.innerHTML = '<i></i><span>'+dst.name+'</span>';
+    b.setAttribute("aria-label", dst.name + ", " + dst.time);
+    b.addEventListener("click", function(){ pick(dst.id); });
+    ringsEl.appendChild(b); dots[dst.id] = b;
+  });
+  var groups = document.getElementById("ring-groups");
+  RINGS.forEach(function(rg, idx){
+    var g = document.createElement("div");
+    g.innerHTML = '<h3>'+rg.label+'</h3><div class="gbtns"></div>';
+    var wrap = g.querySelector(".gbtns");
+    DEST.filter(function(d){ return d.ring === idx; }).forEach(function(dst){
+      var c = document.createElement("button"); c.type = "button"; c.className = "pill"; c.textContent = dst.name;
+      c.addEventListener("click", function(){ pick(dst.id); });
+      wrap.appendChild(c); chips[dst.id] = c;
+    });
+    groups.appendChild(g);
+  });
+  function pick(id){
+    var dst = DEST.filter(function(d){ return d.id === id; })[0];
+    Object.keys(dots).forEach(function(k){ var on = k === id; dots[k].setAttribute("aria-pressed", on); chips[k].setAttribute("aria-pressed", on); });
+    document.getElementById("drive-detail").innerHTML =
+      '<p class="eyebrow">'+dst.time+' from Waynesville</p><h3>'+dst.name+'</h3><p>'+dst.note+'</p><span class="verify">Confirm details before you go</span>';
+  }
+  var dow = today.getDay();
+  pick(dow === 1 ? "balt" : "smokies");
+
+  /* resort finder */
+  var RES = [
+    {n:"Beaches Turks & Caicos", brand:"Beaches", area:"Grace Bay, Providenciales", ap:"PLS", top:true, roll:"Yes", beach:"Yes", rooms:4, autism:true, adults:false, xfer:15, note:"Large resort spread across six villages. Distance is the challenge, not steps. Scooter rental is available."},
+    {n:"Sandals Barbados", brand:"Sandals", area:"Maxwell Beach", ap:"BGI", top:true, roll:"Yes", beach:"Yes", rooms:3, autism:false, adults:true, xfer:15, note:"Short transfer. Shares its beach wheelchairs with Sandals Royal Barbados next door."},
+    {n:"Sandals Grande Antigua", brand:"Sandals", area:"Dickinson Bay", ap:"ANU", top:true, roll:"Yes", beach:"Yes", rooms:2, autism:false, adults:true, xfer:15, note:"Only two equipped rooms, both Club Level. Book early."},
+    {n:"Sandals Negril", brand:"Sandals", area:"Negril", ap:"MBJ", top:true, roll:"Yes", beach:"Yes", rooms:6, autism:false, adults:true, xfer:75, note:"Several room types have steps. Only specific accessible rooms qualify, and I confirm which before booking."},
+    {n:"Sandals Royal Barbados", brand:"Sandals", area:"Maxwell Beach", ap:"BGI", top:true, roll:"Yes", beach:"Yes", rooms:3, autism:false, adults:true, xfer:15, note:"Butler and Club rooms only. Rooftop pool access is still being confirmed."},
+    {n:"Sandals Royal Caribbean", brand:"Sandals", area:"Montego Bay", ap:"MBJ", top:true, roll:"Yes", beach:"Yes", rooms:2, autism:false, adults:true, xfer:null, note:"Skip the offshore island and overwater rooms; reaching them takes a boat."},
+    {n:"Sandals Royal Curaçao", brand:"Sandals", area:"Spanish Bay", ap:"CUR", top:true, roll:"Yes", beach:"Unknown", rooms:7, autism:false, adults:true, xfer:40, note:"The most accessible rooms in the chain, on a large, spread-out property. No beach wheelchair listed."},
+    {n:"Beaches Negril", brand:"Beaches", area:"Negril", ap:"MBJ", top:false, roll:"No", beach:"Beach wheelchair", rooms:7, autism:true, adults:false, xfer:75, note:"Advanced Certified Autism Center. No roll-in showers; rooms have a shower seat and handheld wand."},
+    {n:"Sandals Dunn's River", brand:"Sandals", area:"Ocho Rios", ap:"OCJ / MBJ", top:false, roll:"No", beach:"Yes", rooms:3, autism:false, adults:true, xfer:30, note:"Three accessible rooms and no roll-in shower listed. Fly into Ian Fleming (OCJ) for a 30-minute transfer, or Montego Bay for about 90."},
+    {n:"Sandals Grande St Lucian", brand:"Sandals", area:"Rodney Bay", ap:"UVF", top:false, roll:"Yes", beach:"Yes", rooms:1, autism:false, adults:true, xfer:105, note:"One accessible room. Long transfer on mountain roads."},
+    {n:"Sandals Halcyon", brand:"Sandals", area:"Choc Bay", ap:"UVF", top:false, roll:"Yes", beach:"Yes", rooms:2, autism:false, adults:true, xfer:75, note:"Two equipped rooms. No elevators to the second floor."},
+    {n:"Sandals Montego Bay", brand:"Sandals", area:"Montego Bay", ap:"MBJ", top:false, roll:"Yes", beach:"Yes", rooms:4, autism:false, adults:true, xfer:null, note:"All four accessible rooms are on second floors, served by an elevator."},
+    {n:"Sandals Royal Bahamian", brand:"Sandals", area:"Cable Beach, Nassau", ap:"NAS", top:false, roll:"Some", beach:"Yes", rooms:5, autism:false, adults:true, xfer:15, note:"Some accessible rooms have roll-in showers. The offshore island is reached by boat."},
+    {n:"Sandals Saint Vincent", brand:"Sandals", area:"Buccament Bay", ap:"SVD", top:false, roll:"No", beach:"Yes", rooms:6, autism:false, adults:true, xfer:55, note:"No roll-in shower listed. The overwater villas have stairs."},
+    {n:"Sandals South Coast", brand:"Sandals", area:"Whitehouse", ap:"MBJ", top:false, roll:"No", beach:"Yes", rooms:7, autism:false, adults:true, xfer:90, note:"Accessible rooms have tubs, not roll-in showers. The overwater areas are not accessible."}
+  ];
+  var fR = document.getElementById("f-rollin"), fF = document.getElementById("f-family"), fA = document.getElementById("f-autism"), fT = document.getElementById("f-transfer");
+  function renderFinder(){
+    var max = Number(fT.value);
+    var rows = RES.filter(function(r){
+      if (fR.checked && r.roll !== "Yes") return false;
+      if (fF.checked && r.adults) return false;
+      if (fA.checked && !r.autism) return false;
+      if (max < 999 && (r.xfer === null || r.xfer > max)) return false;
+      return true;
+    });
+    document.getElementById("count-line").textContent = "Showing " + rows.length + " of " + RES.length + " resorts";
+    var out = document.getElementById("results");
+    if (!rows.length){ out.innerHTML = '<p class="empty">No resort matches all of those. Try removing one filter, or ask me; there are options beyond Sandals and Beaches.</p>'; return; }
+    out.innerHTML = rows.map(function(r){
+      return '<article class="rcard"><span class="verdict '+(r.top?'top':'plan')+'">'+(r.top?'Top pick for power chairs':'Works with planning')+'</span>'+
+        '<h3>'+r.n+'</h3><p class="rmeta">'+r.area+' · '+r.ap+(r.adults?' · Adults only':' · Kids welcome')+'</p>'+
+        '<dl class="facts"><dt>Roll-in shower</dt><dd>'+r.roll+'</dd><dt>Accessible rooms</dt><dd>'+r.rooms+'</dd><dt>Beach access</dt><dd>'+r.beach+'</dd><dt>Airport transfer</dt><dd>'+(r.xfer===null?'Not listed':r.xfer+' min')+'</dd>'+(r.autism?'<dt>Autism</dt><dd>Certified center</dd>':'')+'</dl>'+
+        '<p>'+r.note+'</p></article>';
+    }).join("");
+  }
+  [fR,fF,fA,fT].forEach(function(el){ el.addEventListener("change", renderFinder); });
+  renderFinder();
+
+  /* quiz */
+  var Q = {
+    who:[["couple","A couple"],["kids","Family with young kids"],["three","Three generations"],["team","A team or club"]],
+    need:[["relax","Time to relax"],["fun","Lots to do"],["ages","Something for every age"],["access","Accessibility built in"]],
+    far:[["drive","Drive only"],["short","A short flight"],["any","Anywhere"]],
+    pace:[["slow","Slow, one plan a day"],["mix","A mix of busy and quiet"],["full","Full days"]]
+  };
+  Object.keys(Q).forEach(function(k){
+    var box = document.getElementById("q-"+k);
+    box.innerHTML = Q[k].map(function(o){ return '<input type="radio" name="'+k+'" id="q-'+k+'-'+o[0]+'" value="'+o[0]+'"><label for="q-'+k+'-'+o[0]+'">'+o[1]+'</label>'; }).join("");
+  });
+  var IDEAS = {
+    weekend:{t:"A weekend close to home", b:"A lodge or resort within 90 minutes of Waynesville, one outing a day, and your own car. An easy way to travel with little kids or grandparents.", link:"#drive"},
+    drivecruise:{t:"A drive-to cruise", b:"Sail from Baltimore, about eight hours by car. No flight to catch, pack what you like, and the ship handles meals, entertainment and rest days.", link:"#drive"},
+    teamdrive:{t:"A team trip by road", b:"A charter bus or convoy to a regional event, with a room block close to the venue. I handle the rooming list and the hotel details.", link:"#seasonal"},
+    team:{t:"Team or group travel", b:"One booking for the whole group, a room block near the venue, and transport for people and gear.", link:"#seasonal"},
+    couple:{t:"An adults-only all-inclusive", b:"A Sandals resort: meals, drinks and activities included, so there's little to plan once you arrive.", link:"#sales"},
+    beaches:{t:"A family all-inclusive", b:"Beaches resorts have kids camps for every age, water parks and family suites, with everything on property. They're also Certified Autism Centers, if that matters for your family.", link:"#finder"},
+    parks:{t:"An Orlando theme park trip", b:"Pick a week without school breaks, book dining early, and plan rest breaks so everyone lasts the day.", link:"#seasonal"},
+    multigen:{t:"A multi-generational cruise", b:"A ship with kids clubs, quiet decks and plenty of elevators, plus cabins close together so grandparents and grandkids can come and go.", link:"#sales"}
+  };
+  document.getElementById("quiz-form").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var f = new FormData(this), a = {}, missing = [];
+    Object.keys(Q).forEach(function(k){ a[k] = f.get(k); if (!a[k]) missing.push(k); });
+    var out = document.getElementById("q-out");
+    if (missing.length){ out.innerHTML = '<p class="qresult qerr">Answer all four questions to see your trip idea. '+missing.length+' still open.</p>'; return; }
+    var key;
+    if (a.far === "drive") key = a.who === "team" ? "teamdrive" : (a.pace === "slow" ? "weekend" : "drivecruise");
+    else if (a.who === "team") key = "team";
+    else if (a.who === "couple") key = "couple";
+    else if (a.who === "kids" && (a.pace === "full" || a.need === "fun")) key = "parks";
+    else if (a.who === "kids") key = "beaches";
+    else key = "multigen";
+    var idea = IDEAS[key];
+    out.innerHTML = '<div class="qresult"><p class="eyebrow">Your starting idea</p><h3>'+idea.t+'</h3><p>'+idea.b+(a.need === "access" ? ' I confirm every accessibility detail before you book. <a href="#finder">See the accessible resort finder</a>.' : '')+'</p>'+
+      '<div class="cta-row" style="margin-top:6px"><a class="btn" href="'+FORA+'" target="_blank" rel="noopener">Talk it through with Patrick</a><a href="'+idea.link+'">See related ideas</a></div></div>';
+  });
+
+  /* today card, by weekday */
+  var THEMES = ["Weekend reading","No-Fly Monday","Tip Tuesday","Sales roundup","Plan-ahead Thursday","Ohio weekend","Weekend reading"];
+  var h = document.getElementById("today-h"), body = document.getElementById("today-body"), link = document.getElementById("today-link");
+  document.getElementById("today-theme").textContent = "Today · " + THEMES[dow];
+  if (dow === 1){ var bd = DEST[8]; h.textContent = "Cruise from Baltimore, no flight needed"; body.textContent = bd.note; link.href = "#drive"; link.textContent = "See drive-time rings"; }
+  else if (dow === 2){ h.textContent = "Today's tip"; body.textContent = TIPS[(doy+1) % TIPS.length]; link.href = "#finder"; link.textContent = "Browse the resort finder"; }
+  else if (dow === 3){
+    var nLive = live.filter(function(x){ return x.st.order <= 1 || x.st.order === 3; }).length, nSoon = live.filter(function(x){ return x.st.order === 2; }).length;
+    var next = live.filter(function(x){ return x.st.order <= 1; })[0];
+    h.textContent = nLive + " offers running, " + nSoon + " opening soon";
+    body.textContent = next ? (next.s.brand + ": " + next.s.title.toLowerCase().replace(/^./, function(c){return c;}) + ". " + (next.st.n === "Today" ? "Ends today." : "Ends in " + next.st.n + " " + next.st.unit + ".")) : "See what's on the board this week.";
+    link.href = "#sales"; link.textContent = "See the sales board";
+  }
+  else if (dow === 4){ var sc = SEASON[today.getMonth()][0]; h.textContent = sc.t; body.textContent = sc.b; link.href = "#seasonal"; link.textContent = "See this month's plan-ahead list"; }
+  else if (dow === 5){ var near = DEST.filter(function(d){ return d.ring === 0; }); var pickD = near[Math.floor(doy/7) % near.length]; h.textContent = "This weekend: " + pickD.name; body.textContent = pickD.note; link.href = "#drive"; link.textContent = "More trips under 90 minutes"; }
+  else { h.textContent = "Booking a cabin for the whole family"; body.textContent = "Ask for photos of the entry, the bedrooms and the parking area, and count the stairs. Grandparents, toddlers and anyone with a mobility need will thank you."; link.href = "#drive"; link.textContent = "See drive trips"; }
+})();
+</script>
+</body>
+</html>
