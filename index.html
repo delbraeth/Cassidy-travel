@@ -140,11 +140,14 @@ section.block>.wrap{padding-block:56px}
 .ring-label{position:absolute;left:50%;transform:translate(-50%,-50%);font-family:var(--f-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);background:var(--bg);padding:0 6px;white-space:nowrap}
 .home{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:2px;font-family:var(--f-mono);font-size:.7rem;color:var(--ink-soft);text-align:center}
 .home i{width:14px;height:14px;border-radius:50%;background:var(--ink);display:block}
-.dest{position:absolute;transform:translate(-50%,-50%);background:none;border:0;padding:4px;cursor:pointer;display:flex;align-items:center;gap:5px;font:inherit;font-size:.78rem;font-weight:700;color:var(--ink);white-space:nowrap}
+.dest{position:absolute;transform:translate(-14px,-50%);background:none;border:0;padding:8px;cursor:pointer;display:flex;align-items:center;gap:5px;font:inherit;font-size:.78rem;font-weight:700;color:var(--ink);white-space:nowrap}
 .dest i{width:12px;height:12px;border-radius:50%;background:var(--surface);border:2.5px solid var(--lake);flex:0 0 auto}
-.dest.left{flex-direction:row-reverse}
+.dest.left{flex-direction:row-reverse;transform:translate(calc(-100% + 14px),-50%)}
 .dest[aria-pressed="true"] i{background:var(--lake)}
 .dest[aria-pressed="true"] span{color:var(--lake)}
+.dest span{display:none;background:var(--bg);padding:0 4px;border-radius:4px}
+.dest[aria-pressed="true"],.dest:hover,.dest:focus-visible{z-index:2}
+.dest[aria-pressed="true"] span,.dest:hover span,.dest:focus-visible span{display:inline}
 .ring-groups{display:grid;gap:16px}
 .ring-groups h3{font-family:var(--f-mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
 .gbtns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
@@ -298,7 +301,7 @@ img{max-width:100%}
       <div class="sec-head">
         <p class="eyebrow">Road trips</p>
         <h2 id="drive-h">How far can you go by car?</h2>
-        <p>No airports, no baggage limits, and the trip starts in your driveway. Pick a ring to see ideas by drive time from Waynesville.</p>
+        <p>No airports, no baggage limits, and the trip starts in your driveway. Tap a place on the map or in the list to see ideas by drive time from Waynesville.</p>
       </div>
       <div class="drive">
         <div class="rings" id="rings" aria-label="Drive-time map">
@@ -593,7 +596,7 @@ img{max-width:100%}
   DEST.forEach(function(dst){
     var rad = dst.ang * Math.PI/180, r = RINGS[dst.ring].r;
     var b = document.createElement("button");
-    b.type = "button"; b.className = "dest" + (dst.ang > 180 ? " left" : "");
+    b.type = "button"; b.className = "dest" + ((dst.ang > 180 || Math.sin(rad) * r > 0.3) ? " left" : "");
     b.style.left = (50 + Math.sin(rad)*r*50)+"%"; b.style.top = (50 - Math.cos(rad)*r*50)+"%";
     b.innerHTML = '<i></i><span>'+dst.name+'</span>';
     b.setAttribute("aria-label", dst.name + ", " + dst.time);
