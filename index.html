@@ -569,20 +569,20 @@ img{max-width:100%}
   /* drive rings, centered on Waynesville */
   var RINGS = [{r:.26, label:"Under 90 minutes"},{r:.50, label:"About 2 to 3 hours"},{r:.72, label:"About 5 hours"},{r:.94, label:"8 to 10 hours: cruise ports"}];
   var DEST = [
-    {id:"caesar", name:"Caesar Creek", ring:0, ang:115, time:"About 10 min", note:"Caesar Creek State Park: lake, beach, campground and trails right next door. Ask the park office which paths and beach areas are paved before you go."},
-    {id:"dayton", name:"Dayton", ring:0, ang:330, time:"About 35 min", note:"The National Museum of the U.S. Air Force is free, indoors, flat and huge. A good rainy-day pick for mixed ages."},
-    {id:"mason", name:"Kings Island", ring:0, ang:238, time:"About 30 min", note:"Kings Island and the waterpark resorts in Mason. Check the park's accessibility guide and ride access policy before you go."},
+    {id:"caesar", name:"Caesar Creek", ring:0, ang:115, time:"About 10 min", note:"Caesar Creek State Park: lake, beach, campground and trails right next door. Most trails are rated moderate to difficult, but the park has an all-terrain adaptive wheelchair to borrow for trail outings. Call the park office first to check it's available."},
+    {id:"dayton", name:"Dayton", ring:0, ang:330, time:"About 35 min", note:"The National Museum of the U.S. Air Force: free admission and parking, all indoors, and free loaner wheelchairs and motorized carts while they last. A good rainy-day pick for mixed ages. The theater and flight simulators cost extra."},
+    {id:"mason", name:"Kings Island", ring:0, ang:238, time:"About 30 min", note:"Kings Island and the waterpark resorts in Mason. Kings Island publishes a Guest Accessibility Guide and runs an Attraction Accessibility Program, registered through the IBCCES Accessibility Card. Check the current rules before you go."},
     {id:"cincy", name:"Cincinnati", ring:0, ang:200, time:"About 50 min", note:"Zoo, riverfront parks, and the aquarium across the river in Newport. Ask each attraction about sensory bags and quiet rooms."},
-    {id:"cbus", name:"Columbus", ring:0, ang:63, time:"About 1 hr 15 min", note:"Zoo, the COSI science center, and a flat, walkable downtown. Ask about sensory-friendly hours when you plan your dates."},
-    {id:"sandusky", name:"Sandusky", ring:1, ang:35, time:"About 2 hr 45 min", note:"Indoor waterpark resorts for winter weekends. Kalahari is reported to be an IBCCES Certified Autism Center; confirm before booking."},
-    {id:"hocking", name:"Hocking Hills", ring:1, ang:95, time:"About 2 hr 15 min", note:"Cabins, caves and forest. Ash Cave is reported to have a paved trail suitable for wheelchairs. Cabin entries vary a lot, so ask for photos."},
+    {id:"cbus", name:"Columbus", ring:0, ang:63, time:"About 1 hr 15 min", note:"The Columbus Zoo has run quiet hours for guests with sensory needs, and the COSI science center lends free sensory bags with noise-cancelling headphones and fidgets. Check each one's calendar when you plan your dates."},
+    {id:"sandusky", name:"Sandusky", ring:1, ang:35, time:"About 2 hr 45 min", note:"Indoor waterpark resorts for winter weekends. Kalahari's Sandusky resort is designated Sensory Friendly, with a calming room and sensory kits. Ask for them at check-in."},
+    {id:"hocking", name:"Hocking Hills", ring:1, ang:95, time:"About 2 hr 15 min", note:"Cabins, caves and forest. The lower trail at Ash Cave is paved and works for wheelchairs and strollers as far as the cave and waterfall; the loop beyond it climbs steep steps. Cabin entries vary a lot, so ask for photos."},
     {id:"lex", name:"Lexington", ring:1, ang:170, time:"About 1 hr 50 min", note:"Horse farm tours. Ask each farm about ground surfaces, since gravel and grass are common."},
     {id:"louisville", name:"Louisville", ring:1, ang:225, time:"About 2 hours", note:"Riverfront, museums and the Kentucky Derby Museum. Hotels fill early in Derby season."},
     {id:"indy", name:"Indianapolis", ring:1, ang:279, time:"About 2 hours", note:"Flat downtown, a very large children's museum, and many hotels with accessible rooms near the convention center."},
-    {id:"smokies", name:"Gatlinburg", ring:2, ang:185, time:"About 5 hours", note:"Mountain town with steep roads. Many cabins listed as accessible still have a step or a sloped drive. Ask for photos of the entry, the bathroom and the parking spot. Dollywood publishes an accessibility guide."},
-    {id:"balt", name:"Baltimore", ring:3, ang:92, time:"About 8 hours", note:"The closest cruise port by car. No flight to catch and no baggage limits, and if you travel with a wheelchair it never goes in a cargo hold. Check which ships sail from here each season."},
+    {id:"smokies", name:"Gatlinburg", ring:2, ang:185, time:"About 5 hours", note:"Mountain town with steep roads. Many cabins listed as accessible still have a step or a sloped drive. Ask for photos of the entry, the bathroom and the parking spot. Dollywood publishes accessibility guides for its parks, and its DreamMore and HeartSong resorts have accessible rooms, some with roll-in showers."},
+    {id:"balt", name:"Baltimore", ring:3, ang:92, time:"About 8 hours", note:"The closest cruise port by car. Carnival sails from here year-round, and Royal Caribbean is scheduled to return for a summer 2027 season. No flight to catch and no baggage limits, and if you travel with a wheelchair it never goes in a cargo hold."},
     {id:"nynj", name:"New York / NJ", ring:3, ang:66, time:"About 10 hours", note:"Manhattan, Brooklyn and Cape Liberty terminals. A long drive, but the widest choice of ships and itineraries."},
-    {id:"norfolk", name:"Norfolk", ring:3, ang:118, time:"About 9 hr 30 min", note:"Seasonal sailings from Norfolk, Virginia. The schedule changes each year."}
+    {id:"norfolk", name:"Norfolk", ring:3, ang:118, time:"About 9 hr 30 min", note:"Carnival plans to base a ship in Norfolk, Virginia, from May 2027, with Bahamas and Bermuda sailings. Schedules change, so check the current season."}
   ];
   document.getElementById("home-label").textContent = "Home: Waynesville";
   var ringsEl = document.getElementById("rings");
@@ -620,7 +620,7 @@ img{max-width:100%}
     var dst = DEST.filter(function(d){ return d.id === id; })[0];
     Object.keys(dots).forEach(function(k){ var on = k === id; dots[k].setAttribute("aria-pressed", on); chips[k].setAttribute("aria-pressed", on); });
     document.getElementById("drive-detail").innerHTML =
-      '<p class="eyebrow">'+dst.time+' from Waynesville</p><h3>'+dst.name+'</h3><p>'+dst.note+'</p><span class="verify">Confirm details before you go</span>';
+      '<p class="eyebrow">'+dst.time+' from Waynesville</p><h3>'+dst.name+'</h3><p>'+dst.note+'</p><span class="verify">Checked Oct 2026 · confirm before you go</span>';
   }
   var dow = today.getDay();
   pick(dow === 1 ? "balt" : "smokies");
