@@ -208,6 +208,17 @@
       "sub": "Four hours and up",
       "groups": [
         {
+          "id": "holidayworld",
+          "place": "Santa Claus, Indiana",
+          "items": [
+            {
+              "name": "Holiday World & Splashin' Safari",
+              "url": "https://holidayworld.com/park-info/accessibility/",
+              "about": "Accessibility page and 2026 guide made with Easterseals: sensory ratings for every ride, the Ride Boarding Pass, a Calming Room and family restrooms."
+            }
+          ]
+        },
+        {
           "id": "cleveland",
           "place": "Cleveland",
           "items": [
