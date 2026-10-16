@@ -66,7 +66,7 @@ p{margin:0}
 .pill[aria-pressed="true"]{background:var(--lake);color:var(--on-lake);border-color:var(--lake)}
 .has-tip{position:relative;display:inline-flex;align-items:center;gap:6px}
 .tip-q{font:inherit;font-weight:700;font-size:.85rem;width:34px;height:34px;border-radius:50%;border:1px solid var(--control);background:var(--surface);color:var(--lake);cursor:pointer;padding:0}
-@media (hover:hover){.tip-q{display:none}}
+@media (hover:hover) and (pointer:fine){.tip-q{display:none}}
 .tip{position:absolute;top:calc(100% + 8px);left:0;z-index:20;width:max-content;max-width:min(280px,calc(100vw - 32px));background:var(--ink);color:#FFFFFF;font-size:.8rem;line-height:1.4;padding:7px 11px;border-radius:8px;box-shadow:var(--shadow);visibility:hidden;opacity:0;transition:opacity .15s;pointer-events:none}
 .has-tip:has(:focus-visible) .tip,.has-tip.open .tip{visibility:visible;opacity:1}
 @media (hover:hover){.has-tip:hover .tip{visibility:visible;opacity:1}}
@@ -209,6 +209,9 @@ section.block>.wrap{padding-block:56px}
 @media (max-width:860px){.about{grid-template-columns:1fr;gap:32px}}
 .bio p{font-size:var(--step-1);line-height:1.55;max-width:46ch}
 .bio p+p{margin-top:16px}
+.meet{display:flex;gap:14px;align-items:center;margin-top:22px;max-width:52ch}
+.meet img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:50% 20%;flex:0 0 auto;box-shadow:var(--shadow)}
+.meet p{font-size:.97rem}
 .headshot{display:block;width:200px;height:auto;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:22px}
 .cred-group+.cred-group{margin-top:22px}
 .cred-group h3{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;padding-bottom:8px;border-bottom:1px solid var(--rule)}
@@ -239,7 +242,7 @@ img{max-width:100%}
 
 <header class="head">
   <div class="wrap">
-    <a class="mark" href="#top" id="top"><b>Cassidy Travel</b><span>Cruises · Resorts · Family and group travel</span></a>
+    <a class="mark" href="#top" id="top"><b>Cassidy Travel</b><span>Cruises · Resorts · Theme parks · Group travel</span></a>
     <nav aria-label="Sections"><ul class="nav">
       <li><a href="#sales">Sales</a></li>
       <li><a href="#favorites">Favorites</a></li>
@@ -262,7 +265,7 @@ img{max-width:100%}
       <div>
         <p class="eyebrow" id="today-date">Today</p>
         <h1 id="hero-h">Trips planned around the details that matter.</h1>
-        <p class="lede">Cruises, resorts, theme parks and family getaways, planned from Waynesville, Ohio. Traveling with grandparents, little kids, or someone who needs an accessible room? That's where I do my best work.</p>
+        <p class="lede">Beach weekends, cruises, all-inclusives and theme park trips, planned from Waynesville, Ohio. I'm especially good with trips that have more moving parts: three generations, little kids, sports teams, and travelers who need an accessible room or a calmer pace.</p>
         <div class="cta-row">
           <a class="btn" href="https://secure.foratravel.com/intake/AOaJHvy4Ll" target="_blank" rel="noopener">Start planning with Patrick<span class="sr-only"> (opens in a new tab)</span></a>
           <a href="#quiz">Not sure where to start? Take the trip match</a>
@@ -270,6 +273,7 @@ img{max-width:100%}
         <p class="cta-note">"Start planning" opens a short form on Fora Travel, my host agency, in a new tab. I read every one and reply personally.</p>
         <p class="cost"><b>What does it cost?</b> I don't charge a planning fee. I'm paid a commission by the cruise line, resort or tour company you book with. You get one person who knows your trip from start to finish, and someone to call if plans change.</p>
         <p class="cred-line">Trained and certified with Disney, Carnival, Royal Caribbean, Princess, Viking, Sandals and more · Certified Autism Travel Professional</p>
+        <div class="meet"><img src="img/patrick-320.jpg" width="64" height="64" alt=""><p>I'm Patrick. I've served as meet director for one of the country's largest Para swimming meets, and I travel with a power wheelchair myself, so I ask the questions a brochure skips. <a href="#about">More about me</a></p></div>
       </div>
       <aside class="today" aria-labelledby="today-h">
         <div>
