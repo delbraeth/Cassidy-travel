@@ -387,6 +387,7 @@
        {t:"Smoky Mountains color",b:"Fall color usually peaks in October. Book accessible lodging in the mountains now.",n:["Drive trip"]}],
     8:[{t:"Next summer's cabins",b:"Alaska and Europe for next summer open up. The best cabins go first.",n:["Cruise"]},
        {t:"Holiday events with quiet hours",b:"The Columbus Zoo has run sensory-friendly Santa visits and light strolls in past Decembers. Check this year's dates before you book.",n:["Sensory"]},
+       {t:"Ohio Renaissance Festival weekends",b:"Ten minutes from Waynesville, weekends and Labor Day into early November. The festival's accessibility guide covers terrain, restrooms and the loudest show times, so check it before you go.",n:["Ohio","Drive trip"]},
        {t:"Norris Lake in September",b:"After Labor Day the coves quiet down and the water stays warm. Good for grandparents who want the lake without the crowds.",n:["Drive trip","Multi-gen"]}],
     9:[{t:"Hold summer 2027 Alaska cabins now",b:"Summer Alaska sailings sell early, especially balcony, connecting and accessible cabins. Hold one now and choose excursions later.",n:["Cruise","Multi-gen"]},
        {t:"Holiday events with quiet hours",b:"The Columbus Zoo has run sensory-friendly Santa visits and light strolls in past Decembers. Check this year's dates, then plan the trip around them.",n:["Sensory","Family"]}],
@@ -420,6 +421,7 @@
   var RINGS = [{r:.26, label:"Under 90 minutes"},{r:.50, label:"About 2 to 3 hours"},{r:.72, label:"About 4 to 5 hours"},{r:.94, label:"8 to 10 hours"}];
   var DEST = [
     {id:"caesar", name:"Caesar Creek", ring:0, ang:115, time:"About 10 min", note:"Caesar Creek State Park: lake, beach, campground and trails right next door. Most trails are rated moderate to difficult, but the park has an all-terrain adaptive wheelchair to borrow for trail outings. Call the park office first to check it's available."},
+    {id:"renfest", name:"Ohio Renaissance Festival", short:"RenFest", ring:0, ang:75, time:"About 10 min", note:"Weekends and Labor Day from early September to the start of November, 10:30 am to 7 pm. Paths are gravel and grass with a few steep hills, and the festival's accessibility guide shows a route around the two steepest. All eight restrooms have an accessible stall. Expect loud moments: the 10:30 opening cannon, stunt gunfire and the armored joust. The on-site scooter rental ended partway through the 2026 season, so plan to bring your own chair or scooter. ASL interpretation runs one weekend a year.", link:"https://renfestival.com/accessibility-at-the-ohio-renaissance-festival/", linkText:"Read the festival's accessibility guide"},
     {id:"dayton", name:"Dayton", ring:0, ang:330, time:"About 35 min", note:"The National Museum of the U.S. Air Force: free admission and parking, all indoors, and free loaner wheelchairs and motorized carts while they last. A good rainy-day pick for mixed ages. The theater and flight simulators cost extra."},
     {id:"mason", name:"Kings Island", ring:0, ang:238, time:"About 30 min", note:"Kings Island and the waterpark resorts in Mason. Kings Island publishes a Guest Accessibility Guide and runs an Attraction Accessibility Program, registered through the IBCCES Accessibility Card. Check the current rules before you go."},
     {id:"cincy", name:"Cincinnati", ring:0, ang:200, time:"About 50 min", note:"Zoo, riverfront parks, and the aquarium across the river in Newport. Ask each attraction about sensory bags and quiet rooms."},
@@ -453,7 +455,7 @@
     var b = document.createElement("button");
     b.type = "button"; b.className = "dest" + ((dst.ang > 180 || Math.sin(rad) * r > 0.3) ? " left" : "");
     b.style.left = (50 + Math.sin(rad)*r*50)+"%"; b.style.top = (50 - Math.cos(rad)*r*50)+"%";
-    b.innerHTML = '<i></i><span>'+dst.name+'</span>';
+    b.innerHTML = '<i></i><span>'+(dst.short || dst.name)+'</span>';
     b.tabIndex = -1;
     b.addEventListener("click", function(){ pick(dst.id); });
     ringsEl.appendChild(b); dots[dst.id] = b;
@@ -474,7 +476,7 @@
     var dst = DEST.filter(function(d){ return d.id === id; })[0];
     Object.keys(dots).forEach(function(k){ var on = k === id; dots[k].setAttribute("aria-pressed", on); chips[k].setAttribute("aria-pressed", on); });
     document.getElementById("drive-detail").innerHTML =
-      '<p class="eyebrow">'+dst.time+' from Waynesville</p><h3>'+dst.name+'</h3><p>'+dst.note+'</p><span class="verify">Checked Oct 2026 · confirm before you go</span>';
+      '<p class="eyebrow">'+dst.time+' from Waynesville</p><h3>'+dst.name+'</h3><p>'+dst.note+'</p>'+(dst.link ? '<p><a href="'+dst.link+'" target="_blank" rel="noopener">'+dst.linkText+'<span class="sr-only"> (opens in a new tab)</span></a></p>' : '')+'<span class="verify">Checked Oct 2026 · confirm before you go</span>';
   }
   var dow = today.getDay();
   pick(dow === 1 ? "balt" : "smokies");
