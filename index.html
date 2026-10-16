@@ -56,6 +56,9 @@ p{margin:0}
 .toggles{display:flex;flex-wrap:wrap;gap:8px}
 .pill{font:inherit;font-size:.85rem;color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:6px 13px;cursor:pointer}
 .pill[aria-pressed="true"]{background:var(--lake);color:var(--on-lake);border-color:var(--lake)}
+.has-tip{position:relative;display:inline-flex}
+.tip{position:absolute;top:calc(100% + 8px);left:0;z-index:20;width:max-content;max-width:min(280px,calc(100vw - 32px));background:var(--ink);color:#FFFFFF;font-size:.8rem;line-height:1.4;padding:7px 11px;border-radius:8px;box-shadow:var(--shadow);visibility:hidden;opacity:0;transition:opacity .15s;pointer-events:none}
+.has-tip:hover .tip,.has-tip:focus-within .tip{visibility:visible;opacity:1}
 
 /* hero */
 .hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:44px;padding-block:36px 60px;align-items:start}
@@ -233,7 +236,7 @@ img{max-width:100%}
       <li><a href="#about">About</a></li>
     </ul></nav>
     <div class="toggles" aria-label="Display options">
-      <button class="pill" id="t-calm" type="button" aria-pressed="false">Calm mode</button>
+      <span class="has-tip"><button class="pill" id="t-calm" type="button" aria-pressed="false" aria-describedby="tip-calm">Calm mode</button><span class="tip" id="tip-calm" role="tooltip">Stops animation and softens colors</span></span>
       <button class="pill" id="t-large" type="button" aria-pressed="false">Larger text</button>
     </div>
   </div>
