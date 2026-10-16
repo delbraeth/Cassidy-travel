@@ -1,0 +1,147 @@
+{
+  "checked": "October 2026",
+  "sections": [
+    {"id": "close", "title": "Close to home", "sub": "Under 90 minutes from Waynesville", "groups": [
+      {"id": "waynesville", "place": "Waynesville and Dayton", "items": [
+        {"name": "Ohio Renaissance Festival", "url": "https://renfestival.com/accessibility-at-the-ohio-renaissance-festival/", "about": "A walk-through guide: parking, gravel paths and the route around the steepest hills, restrooms, loud show times, service animals."},
+        {"name": "Caesar Creek State Park", "url": "https://ohiodnr.gov/go-and-do/plan-a-visit/find-a-property/caesar-creek-state-park", "about": "Ohio DNR park page. Accessibility details are thin, so call the park office about the adaptive trail wheelchair."},
+        {"name": "National Museum of the U.S. Air Force", "url": "https://www.nationalmuseum.af.mil/Visit/", "about": "Visitor information page. The museum has no separate accessibility page."},
+        {"name": "Dayton Aviation Heritage National Historical Park", "url": "https://www.nps.gov/daav/planyourvisit/accessibility.htm", "about": "Site-by-site access for the Wright brothers sites: parking, elevators, restrooms, captioned films."},
+        {"name": "Boonshoft Museum of Discovery", "url": "https://boonshoft.org/about-us/accessibility/", "about": "Wheelchair loans, sensory bags, Sensory Sundays, a quiet room and a universal changing station."},
+        {"name": "Carillon Historical Park", "url": "https://www.daytonhistory.org/visit/general-info/parking-accessibility/", "about": "Wheelchair loans, parking, the accessible carousel and railroad, and which historic buildings have limits."}
+      ]},
+      {"id": "cincinnati", "place": "Cincinnati, Mason and Northern Kentucky", "items": [
+        {"name": "Kings Island", "url": "https://sixflags.com/kingsisland/accessibility", "about": "Links the park's Guest Accessibility Guide, with ride access, rentals and the IBCCES Accessibility Card program."},
+        {"name": "Great Wolf Lodge Mason", "url": "https://www.greatwolf.com/mason/accessibility", "about": "Accessible rooms, pool lifts, zero-depth entries, waterproof wheelchairs and a sensory guide."},
+        {"name": "Cincinnati Zoo & Botanical Garden", "url": "https://cincinnatizoo.org/plan-your-visit/zoo-access-for-all/", "about": "Zoo Access for All: wheelchair and scooter rental, sensory bags, calming rooms, adult changing tables, sensory map."},
+        {"name": "Cincinnati Museum Center", "url": "https://www.cincymuseum.org/accessibility", "about": "Wheelchair and scooter rental, quiet zones, sensory maps, ASL tours and assistive listening."},
+        {"name": "Cincinnati Art Museum", "url": "https://cincinnatiartmuseum.org/access", "about": "Wheelchair loans, a sensory cart, large-print and braille guides, ASL on request."},
+        {"name": "Newport Aquarium", "url": "https://www.newportaquarium.com/plan-your-visit/accessibility/", "about": "The aquarium's accessibility page, including wheelchair loans and sensory bags."},
+        {"name": "Creation Museum", "url": "https://creationmuseum.org/accessibility/", "about": "Wheelchair and scooter rental, sensory kits, a photo social story and ASL dates."},
+        {"name": "Ark Encounter", "url": "https://arkencounter.com/accessibility/", "about": "Ramps and elevators, wheelchair and scooter rental, an accessibility map, sensory kits, ASL and captioning."}
+      ]},
+      {"id": "columbus", "place": "Columbus", "items": [
+        {"name": "Columbus Zoo and Aquarium", "url": "https://columbuszoo.org/accessibility", "about": "Wheelchair and scooter rental, KultureCity sensory bags, Quiet Hours and an adult changing station."},
+        {"name": "Zoombezi Bay", "url": "https://www.zoombezibay.com/accessibility", "about": "Accessible routes, a rides and attractions guide, water wheelchairs and sensory bags."},
+        {"name": "COSI", "url": "https://cosi.org/visit/amenities-and-accessibility", "about": "Free sensory bags, wheelchair and scooter rental, a calming room and a sensory map."},
+        {"name": "Franklin Park Conservatory", "url": "https://www.fpconservatory.org/plan-a-visit/know-before-you-go/", "about": "Ramps, elevators, paved paths, free wheelchairs and an accessibility PDF."},
+        {"name": "National Veterans Memorial and Museum", "url": "https://nationalvmm.org/visit/accessibility/", "about": "The museum's accessibility page, including sensory supports and wheelchairs."}
+      ]}
+    ]},
+    {"id": "regional", "title": "Two to three hours", "sub": "Weekend drives", "groups": [
+      {"id": "sandusky", "place": "Sandusky", "items": [
+        {"name": "Kalahari Resorts Sandusky", "url": "https://www.kalahariresorts.com/ohio/sensory-friendly/", "about": "The resort's sensory-friendly page: calming room and free sensory kits at the front desk."},
+        {"name": "Cedar Point", "url": "https://www.sixflags.com/cedarpoint/accessibility", "about": "Links the park's Guest Accessibility Guide, with ride access, rentals, a quiet room and the IBCCES Accessibility Card."}
+      ]},
+      {"id": "hocking", "place": "Hocking Hills and southeast Ohio", "items": [
+        {"name": "Hocking Hills State Park", "url": "https://ohiodnr.gov/go-and-do/plan-a-visit/find-a-property/hocking-hills-state-park", "about": "Ohio DNR park page. Its trail list marks Ash Cave Gorge as wheelchair accessible."},
+        {"name": "The Wilds", "url": "https://thewilds.org/accessibility", "about": "Wheelchair-accessible safari vehicles on request, a caregiver ticket, a sensory guide and accessible lodging."}
+      ]},
+      {"id": "kentucky", "place": "Lexington and Louisville", "items": [
+        {"name": "Kentucky Horse Park", "url": "https://kyhorsepark.com/park-information/accessibility/", "about": "Free wheelchairs, an accessible horse-drawn trolley, museum elevators and the Sunflower program."},
+        {"name": "Kentucky Derby Museum", "url": "https://derbymuseum.org/plan-a-visit/accessibility.html", "about": "Free wheelchairs, accessible track tours, induction loop, captioning, ASL on request and a quiet space."},
+        {"name": "Louisville Zoo", "url": "https://louisvillezoo.org/kulturecity", "about": "KultureCity sensory page: free sensory bags, quiet areas and a social story."},
+        {"name": "Kentucky Kingdom", "url": "https://www.kentuckykingdom.com/Accessibility", "about": "The park's accessibility page and rider requirements guide."}
+      ]},
+      {"id": "indianapolis", "place": "Indianapolis", "items": [
+        {"name": "The Children's Museum of Indianapolis", "url": "https://www.childrensmuseum.org/visit/accessibility", "about": "Free wheelchairs, an adult changing table, ASL and assistive listening, sensory maps and social narratives."},
+        {"name": "Indianapolis Zoo", "url": "https://www.indianapoliszoo.com/accessibility", "about": "Sensory-friendly days, a calming room, an accessibility map and advance accommodation requests."}
+      ]}
+    ]},
+    {"id": "longer", "title": "Longer drives", "sub": "Four hours and up", "groups": [
+      {"id": "cleveland", "place": "Cleveland", "items": [
+        {"name": "Rock & Roll Hall of Fame", "url": "https://www.rockhall.com/accessibility", "about": "Mobility aids, ASL interpreters, human guides and sensory supports."},
+        {"name": "Cleveland Museum of Art", "url": "https://www.clevelandart.org/plan-your-visit/accessibility-and-ada-compliance", "about": "Step-free entrance, accessible parking, free wheelchairs and screen-reader support."},
+        {"name": "Great Lakes Science Center", "url": "https://greatscience.com/visit/accessibility-amenities", "about": "Wheelchair-accessible building and dome theater, a sensory space and sensory-friendly Sundays."},
+        {"name": "Cleveland Metroparks Zoo", "url": "https://www.clevelandmetroparks.com/about/cleveland-metroparks-organization/accessibility/zoo-accessibility", "about": "Mobility rentals, a sensory room, quiet zones and caregiver admission."}
+      ]},
+      {"id": "chicago", "place": "Chicago", "items": [
+        {"name": "Navy Pier", "url": "https://navypier.org/plan-your-visit/accessibility/", "about": "Wheelchair loans, an accessible Ferris wheel, elevators and level-by-level maps."},
+        {"name": "Shedd Aquarium", "url": "https://sheddaquarium.org/plan-a-visit/accessibility", "about": "The aquarium's accessibility page: exhibits, seating, parking and sensory supports."},
+        {"name": "Field Museum", "url": "https://www.fieldmuseum.org/accessibility", "about": "Wheelchairs, sensory bags, low-sensory spaces and an audio and tactile guide."},
+        {"name": "Griffin Museum of Science and Industry", "url": "https://www.griffinmsi.org/visit/accessibility", "about": "Building access, sensory notes by exhibit and low-sensory mornings."},
+        {"name": "CTA (Chicago trains and buses)", "url": "https://www.transitchicago.com/accessibility/", "about": "Which stations are accessible, elevator alerts and paratransit."}
+      ]},
+      {"id": "norris", "place": "Norris Lake", "items": [
+        {"name": "Norris Dam State Park", "url": "https://tnstateparks.com/parks/norris-dam/accessibility", "about": "An accessible paddling launch, adult changing table, accessible shelters and lodging notes."},
+        {"name": "Accessible fishing dock, Campbell County", "url": "https://www.tn.gov/twra/news/2026/7/31/new-courtesy-dock-completed-in-campbell-county.html", "about": "TWRA's announcement of the ADA-accessible dock at the Davis Cemetery Access Area."}
+      ]},
+      {"id": "smokies", "place": "Gatlinburg and Pigeon Forge", "items": [
+        {"name": "Dollywood", "url": "https://www.dollywood.com/accessibility/dollywood-theme-park/", "about": "Mobility policy, wheelchair and scooter rental, the Ride Accessibility Center and a downloadable guide."},
+        {"name": "Dollywood's Splash Country", "url": "https://www.dollywood.com/accessibility/dollywood-splash-country", "about": "Water park access, water wheelchairs and a downloadable guide."},
+        {"name": "Great Smoky Mountains National Park", "url": "https://www.nps.gov/grsm/planyourvisit/accessibility.htm", "about": "Accessible drives and facilities, the accessible trail, campsites and off-road wheelchairs."},
+        {"name": "Pigeon Forge accessibility hub", "url": "https://www.mypigeonforge.com/planning/accessibility/", "about": "The visitor bureau's guide to mobility, hearing, vision and cognitive access around town."},
+        {"name": "Gatlinburg trolley", "url": "https://www.gatlinburg.com/things-to-do/trolley/policies/", "about": "Lift-equipped trolleys and paratransit. Gatlinburg has no general accessibility page."},
+        {"name": "Ripley's Aquarium of the Smokies", "url": "https://www.ripleys.com/attractions/ripleys-aquarium-of-the-smokies/events/sensory-night", "about": "Sensory-friendly nights and mornings, plus sensory bags and headphones."},
+        {"name": "Anakeesta", "url": "https://anakeesta.com/faq/", "about": "FAQ on which areas are wheelchair accessible and which aren't, and gondola size."}
+      ]},
+      {"id": "myrtle", "place": "Myrtle Beach", "items": [
+        {"name": "North Myrtle Beach beach wheelchairs", "url": "https://www.nmb.us/215/Beach-Wheelchairs", "about": "Free beach wheelchairs to borrow from the city."},
+        {"name": "City of Myrtle Beach accessibility", "url": "https://www.cityofmyrtlebeach.com/services/accessibility_information/index.php", "about": "Which beach accesses are fully accessible, parking for disability plates, and beach wheelchair rental vendors."},
+        {"name": "Visit Myrtle Beach accessible travel", "url": "https://www.visitmyrtlebeach.com/plan/accessible-travel", "about": "The visitor bureau's guide to accessible lodging, attractions, beach access and sensory-friendly planning."},
+        {"name": "Ripley's Aquarium of Myrtle Beach", "url": "https://www.ripleys.com/attractions/ripleys-aquarium-of-myrtle-beach/events/sensory-friendly-hours", "about": "Sensory-friendly hours with adjusted lighting, no music and a quiet room."},
+        {"name": "Broadway at the Beach", "url": "https://www.broadwayatthebeach.com/visit/guest-services/", "about": "Guest services, including the on-site wheelchair and scooter rental."},
+        {"name": "Brookgreen Gardens", "url": "https://www.brookgreen.org/visit", "about": "Visitor information, including mobility devices in the gardens."}
+      ]},
+      {"id": "orlando", "place": "Orlando", "items": [
+        {"name": "Walt Disney World: guests with disabilities", "url": "https://disneyworld.disney.go.com/guest-services/guests-with-disabilities/", "about": "Parking, wheelchair and scooter rental, attraction access, hotel accessibility and ASL schedules."},
+        {"name": "Walt Disney World: Disability Access Service", "url": "https://disneyworld.disney.go.com/guest-services/disability-access-service/", "about": "Who qualifies for DAS and how to register by video chat before your trip."},
+        {"name": "Universal Orlando accessibility", "url": "https://www.universalorlando.com/web/en/us/terms-of-service/accessibility-information", "about": "The Attractions Assistance Pass, rentals, quiet rooms and the rider accessibility guides."},
+        {"name": "SeaWorld Orlando", "url": "https://seaworld.com/orlando/help/guests-with-disabilities/", "about": "The Ride Accessibility Program, rentals, ASL and sensory resources."},
+        {"name": "LEGOLAND Florida", "url": "https://www.legoland.com/florida/plan-your-visit/know-before-you-go/accessibility-information/", "about": "The HERO Access Pass, sensory rooms and guides, and Certified Autism Center status."},
+        {"name": "Kennedy Space Center Visitor Complex", "url": "https://www.kennedyspacecenter.com/info/accessibility", "about": "Equipment rental, autism resources and accessible tour buses."}
+      ]}
+    ]},
+    {"id": "ports", "title": "Cruise ports you can drive to", "sub": "No flight needed", "groups": [
+      {"id": "ports-list", "place": "", "items": [
+        {"name": "Baltimore: Cruise Maryland Terminal", "url": "https://cruise.maryland.gov/Pages/content/ADA-Compliance.aspx", "about": "The terminal's accessibility page, with each cruise line's access contact."},
+        {"name": "New York: Brooklyn and Manhattan terminals", "url": "https://cruise.nyc/cruisenyc-faq", "about": "Accessible parking at both terminals. Request wheelchair help through your cruise line."},
+        {"name": "Norfolk: Half Moone Cruise Center", "url": "https://www.visitnorfolk.com/cruisenorfolk-frequently-asked-questions/", "about": "Accessible parking and drop-off, a lift-equipped shuttle, and wheelchair and scooter guidance."}
+      ]}
+    ]},
+    {"id": "cruise", "title": "Cruise lines", "sub": "Each line's own accessibility page. Most want your requests 30 to 60 days before sailing.", "groups": [
+      {"id": "cruise-list", "place": "", "items": [
+        {"name": "Carnival", "url": "https://www.carnival.com/about-carnival/special-needs", "about": "Accessible cabins, mobility devices, transfers, hearing and vision aids, service dogs and sensory support."},
+        {"name": "Royal Caribbean", "url": "https://www.royalcaribbean.com/experience/accessible-cruising", "about": "Accessible cruising overview.", "extra": {"text": "Request form", "url": "https://www.royalcaribbean.com/resources/guest-special-needs"}},
+        {"name": "Celebrity Cruises", "url": "https://www.celebritycruises.com/special-needs/accessibility", "about": "Accessible transfers, boarding help, onboard assistance and tender ports.", "extra": {"text": "Autism-friendly cruising", "url": "https://www.celebritycruises.com/special-needs/guests-with-autism"}},
+        {"name": "Princess", "url": "https://www.princess.com/accessibility-at-sea", "about": "Check-in help, mobility devices, service animals, medical needs and accessible cabins."},
+        {"name": "Holland America", "url": "https://www.hollandamerica.com/en/us/accessibility", "about": "Accessible cabin types and route maps, mobility, hearing, vision and medical services."},
+        {"name": "Norwegian", "url": "https://www.ncl.com/about/accessible-cruising", "about": "The Access Desk and onboard Access Officers, mobility, tenders, and deaf and blind services."},
+        {"name": "MSC Cruises", "url": "https://www.msccruisesusa.com/accessibility-medical", "about": "Accessibility and medical requests and accessible cabins."},
+        {"name": "Viking", "url": "https://www.vikingcruises.com/oceans/frequently-asked-questions.html", "about": "FAQ with a Health and Accessibility section. River ships have more limits than ocean ships, so ask me before you book."},
+        {"name": "Virgin Voyages", "url": "https://www.virginvoyages.com/accessibility", "about": "Pre-voyage planning, accessible cabins and onboard help."},
+        {"name": "Disney Cruise Line", "url": "https://disneycruise.disney.go.com/guest-services/guests-with-disabilities/", "about": "Mobility, hearing, vision and autism services.", "extra": {"text": "Full guide (PDF, January 2026)", "url": "https://cdn1.parksmedia.wdprapps.disney.com/vision-dam/digital/parks-platform/parks-global-assets/disney-cruise-line/guest-services/accessibility/DCL_Information-Guide-for-Guest-with-Disabilties_Medical-Conditions-Jan-2026.pdf"}},
+        {"name": "Azamara", "url": "https://azamara.com/our-ships/accessible-cruising", "about": "Accessible cabins, embarkation, mobility devices and accessible excursions."}
+      ]}
+    ]},
+    {"id": "resorts", "title": "Resorts and theme parks", "sub": "", "groups": [
+      {"id": "resorts-list", "place": "", "items": [
+        {"name": "Sandals Resorts accessibility guide", "url": "https://www.sandals.com/accessibility-guide/", "about": "Accessible room features and notes for every Sandals resort. The resort finder on my home page is built from it."},
+        {"name": "Beaches Resorts", "url": "https://www.beaches.com/vacations/families-with-special-needs/", "about": "Accessible rooms by resort and autism-friendly services."},
+        {"name": "Universal Studios Hollywood", "url": "https://www.universalstudioshollywood.com/accessibility-information/", "about": "Attraction access, mobility, hearing, vision and cognitive disabilities."},
+        {"name": "Disneyland: Disability Access Service", "url": "https://disneyland.disney.go.com/guest-services/disability-access-service/", "about": "How DAS works at the Disneyland Resort."},
+        {"name": "IBCCES Accessibility Card", "url": "https://ibcces.org/ac/", "about": "A free card used at Kings Island, Cedar Point, Universal and other parks to set up accommodations once."}
+      ]}
+    ]},
+    {"id": "airports", "title": "Airports", "sub": "Home airports and common destinations", "groups": [
+      {"id": "airports-list", "place": "", "items": [
+        {"name": "Dayton (DAY)", "url": "https://flydayton.com/services-information/", "about": "Terminal services. Dayton has no separate accessibility page."},
+        {"name": "Cincinnati/Northern Kentucky (CVG)", "url": "https://www.cvgairport.com/accessibility/", "about": "Wheelchair help, a sensory room, the Sunflower program and adult changing stations."},
+        {"name": "Columbus (CMH)", "url": "https://flycolumbus.com/passengers/accessibility/", "about": "Wheelchairs, accessible parking and lift-equipped shuttles, and the Sunflower program."},
+        {"name": "Indianapolis (IND)", "url": "https://www.ind.com/civil-rights", "about": "Sensory rooms, adult changing tables and wheelchair service."},
+        {"name": "Orlando International (MCO)", "url": "https://flymco.com/accessibility/", "about": "Sunflower lanyards, a sensory room and adult changing tables."},
+        {"name": "Orlando Sanford (SFB)", "url": "https://flysfb.com/traveler-assistance/family-travel-special-needs/", "about": "Wheelchair help and the Sunflower program."},
+        {"name": "Myrtle Beach (MYR)", "url": "https://www.flymyrtlebeach.com/information/accessibility/", "about": "Wheelchair service, a quiet room and service animal relief areas."}
+      ]}
+    ]},
+    {"id": "flying", "title": "Flying and national programs", "sub": "", "groups": [
+      {"id": "flying-list", "place": "", "items": [
+        {"name": "TSA Cares", "url": "https://www.tsa.gov/travel/tsa-cares", "about": "TSA's help line for travelers with disabilities and medical conditions."},
+        {"name": "TSA Passenger Support Specialists", "url": "https://www.tsa.gov/travel/tsa-cares/passenger-support", "about": "How to request a specialist to help you through security."},
+        {"name": "Airline Passengers with Disabilities Bill of Rights", "url": "https://www.transportation.gov/airconsumer/disabilitybillofrights", "about": "The U.S. DOT's plain-language summary of your rights when you fly."},
+        {"name": "Airline wheelchair and guided assistance", "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/wheelchair-and-guided-assistance", "about": "The U.S. DOT's guidance on wheelchair help at airports."},
+        {"name": "National Park Service Access Pass", "url": "https://www.nps.gov/planyourvisit/passes.htm", "about": "A free lifetime pass to national parks for U.S. citizens and residents with a permanent disability."}
+      ]}
+    ]}
+  ]
+}

@@ -228,7 +228,7 @@ img{max-width:100%}
 /* audience pages */
 .page-hero{background:linear-gradient(180deg,var(--sky) 0%,var(--bg) 100%)}
 .page-hero .wrap{padding-block:36px 48px;display:grid;gap:16px;max-width:820px;margin-left:auto;margin-right:auto}
-.page-hero h1{font-size:var(--step-4);font-weight:800;letter-spacing:-.01em;max-width:18ch}
+.page-hero h1{font-size:clamp(1.9rem,5.4vw,3.7rem);font-weight:800;letter-spacing:-.01em;max-width:18ch;hyphens:auto;overflow-wrap:break-word}
 .narrow{max-width:820px;margin-left:auto;margin-right:auto}
 .checks{list-style:none;margin:0;padding:0;display:grid;gap:14px}
 .checks li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start}
@@ -239,3 +239,15 @@ img{max-width:100%}
 .qa summary{font-family:var(--f-display);font-weight:800;cursor:pointer}
 .qa details p{margin-top:8px;color:var(--ink-soft)}
 .back{font-weight:700}
+
+/* accessibility guides page */
+.g-jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.g-jump .pill{text-decoration:none;max-width:100%;white-space:normal}
+.page-hero .wrap>*{min-width:0}
+.g-place{font-size:var(--step-1);margin:26px 0 10px}
+.g-place:first-of-type{margin-top:0}
+.g-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.g-list li{display:grid;gap:2px;padding:12px 16px;background:var(--surface);border:1px solid var(--rule);border-radius:12px}
+.g-name{font-family:var(--f-display);font-weight:800}
+.g-about{color:var(--ink-soft);font-size:.97rem}
+.g-about a{font-weight:700}
