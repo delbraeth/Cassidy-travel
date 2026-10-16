@@ -4,4 +4,7 @@
     <loc>https://cassidytravel.org/</loc>
     <changefreq>daily</changefreq>
   </url>
+  <url>
+    <loc>https://cassidytravel.org/teams.html</loc>
+  </url>
 </urlset>
