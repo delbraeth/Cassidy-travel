@@ -276,6 +276,42 @@
           ]
         },
         {
+          "id": "nashville",
+          "place": "Nashville",
+          "items": [
+            {
+              "name": "Visit Music City accessibility",
+              "url": "https://www.visitmusiccity.com/accessibility",
+              "about": "The visitor bureau's accessibility page, with a list of businesses recognized for access."
+            },
+            {
+              "name": "Nashville accessibility itinerary",
+              "url": "https://www.visitmusiccity.com/nashville-trip-ideas/nashvilles-accessibility-itinerary",
+              "about": "The visitor bureau's trip plan: accessible attractions, sensory-friendly options, dining and downtown hotels."
+            },
+            {
+              "name": "Grand Ole Opry",
+              "url": "https://opry.com/accessibility",
+              "about": "Free loaner wheelchairs, lifts to second-level seating, assistive listening, and interpreters with three weeks' notice."
+            },
+            {
+              "name": "Ryman Auditorium",
+              "url": "https://www.ryman.com/accessibility",
+              "about": "Wheelchair seating on the main floor and balcony, free loaner wheelchairs, and wheelchair-accessible tours."
+            },
+            {
+              "name": "Country Music Hall of Fame and Museum",
+              "url": "https://countrymusichalloffame.org/accessibility",
+              "about": "Courtesy wheelchairs and large-print guides. Power chairs and scooters can't ride the Studio B tour shuttle."
+            },
+            {
+              "name": "Wheelchair Travel: Nashville",
+              "url": "https://wheelchairtravel.org/nashville/",
+              "about": "An independent guide written by a wheelchair user: attractions, hotels and getting around."
+            }
+          ]
+        },
+        {
           "id": "norris",
           "place": "Norris Lake",
           "items": [
