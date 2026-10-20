@@ -8,6 +8,13 @@
       "end": "2026-10-20"
     },
     {
+      "brand": "Norwegian Cruise Line",
+      "title": "2nd Guest Free on Norwegian balcony and above",
+      "terms": "Book by end of day Oct 22, 2026, in balcony or above staterooms on select sailings. Supplier terms apply.",
+      "why": "A simple way to cut the cost of a couples or friends cruise, with a balcony for the views. Ask me which sailings qualify and which staterooms suit your group.",
+      "end": "2026-10-22"
+    },
+    {
       "brand": "Explora Journeys",
       "title": "Explora Journeys festive sailings, up to 30% off",
       "terms": "Reserve by Oct 27, 2026 for savings of up to 30% and a reduced 10% deposit on Festive Journeys (Caribbean and Mediterranean). Supplier terms apply.",
@@ -20,6 +27,27 @@
       "terms": "Purchase by Oct 30, 2026, for sailings Oct 31, 2026 through Dec 31, 2027.",
       "why": "Settling add-ons before you sail makes the family budget easier and means fewer decisions on board.",
       "end": "2026-10-30"
+    },
+    {
+      "brand": "Victory Cruise Lines",
+      "title": "Second guest sails free on select 2027 voyages",
+      "terms": "Reserve by Oct 31, 2026, on select new 2027 St. Lawrence River, Canadian Maritimes and East Coast voyages. Supplier terms apply.",
+      "why": "A good fit for couples or a pair of friends who like smaller ships and scenic regional routes. Ask me which sailings qualify.",
+      "end": "2026-10-31"
+    },
+    {
+      "brand": "Hilton Hawaii",
+      "title": "Up to 30% off Hilton stays in Hawaii",
+      "terms": "Book by Nov 2, 2026, for travel through Sep 30, 2027. Supplier terms apply.",
+      "why": "A good fit for travelers planning a Hawaii trip next year who want a well-known hotel brand. Ask me about room types and accessible options.",
+      "end": "2026-11-02"
+    },
+    {
+      "brand": "Royal Caribbean",
+      "title": "60% off 2nd guest, kids sail free, 3rd & 4th free",
+      "terms": "Book by Nov 2, 2026, on select sailings of 3 nights or longer; kids offer applies to guests 12 and under; taxes, fees and port expenses extra. Supplier terms apply.",
+      "why": "A strong fit for families and multi-generational groups, since the extra guests in the cabin cost much less. Ask me which sailings qualify and which staterooms suit your group.",
+      "end": "2026-11-02"
     },
     {
       "brand": "Celebrity Cruises",
@@ -60,6 +88,12 @@
       "title": "The Great Jamaica Comeback Sale",
       "terms": "Added value at three newly reimagined Sandals resorts in Jamaica, plus an air credit and a complimentary local experience; limited-time offer, varies by resort, dates and availability. Supplier terms apply.",
       "why": "A good fit if you want an easy all-inclusive Caribbean beach week with extra value built in. Ask me which Jamaica resort suits your group and whether you need an accessible room."
+    },
+    {
+      "brand": "Universal Orlando Resort",
+      "title": "Up to 30% off Universal Orlando hotels",
+      "terms": "Minimum 5-night stay, travel Sep 8, 2026 to Mar 15, 2027 (some dates excluded); limited availability. Supplier terms apply.",
+      "why": "A good fit for families planning a theme park trip around the holidays, which run Nov 14 to Jan 3. Ask me about room types and what works for your group, including accessible or sensory-friendly needs."
     }
   ]
 }
