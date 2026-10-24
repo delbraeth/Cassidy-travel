@@ -14,7 +14,13 @@ It covers **parking**, **getting around**, **sensory supports**, **restrooms and
 
 ## Parking
 
-There are accessible parking spaces in the Zoo's lots, but they fill up fast, especially on weekends and during special events. If you need one, arrive early, or plan a weekday visit.
+Go to the **Vine Lot (Lot A), 3427 Vine Street**. It has 20 dedicated accessible spaces, and it's the lot the Zoo sends everyone with a placard to; the Erkenbrecher and Dury lots direct you back to Vine.
+
+- **Placard holders are always let into the Vine Lot, even when it's full** for everyone else. Keep your placard visible to the attendants as you pull in.
+- The 20 accessible spaces themselves fill up fast, especially on weekends and during special events. Arrive early, or plan a weekday visit, if you want one of them.
+- **Need a rental wheelchair or ECV to get from the car to the gate?** Tell a parking attendant and they'll help you get one. The Zoo says availability isn't guaranteed, so reserve online ahead if you can.
+
+The Zoo's [parking map](https://cincinnatizoo.org/plan-your-adventure/#map) shows all the lots.
 
 ## Getting around: plan for hills
 
