@@ -34,7 +34,7 @@ From my own visits:
 
 The Zoo is one of the oldest in the country and was built on a hill, so expect inclines. There are benches and rest areas throughout, and any employee can point you to the less steep paths. Ask at the start, not halfway up.
 
-From my own visits: **every exhibit is reachable in a wheelchair.** Wherever there are stairs, there's a ramp too. The ramps can be long on this hilly site, but you won't hit a dead end.
+From my own visits: **every exhibit is reachable in a wheelchair.** Wherever there are stairs, there's a ramp too, so you won't hit a dead end.
 
 Rentals are at the Welcome Center in Historic Vine Street Village, first come, first served:
 
