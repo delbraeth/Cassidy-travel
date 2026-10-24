@@ -4,6 +4,9 @@ date: 2026-10-24
 slug: accessible-ohio-cincinnati-zoo
 summary: Calming rooms, sensory bags, wheelchair and ECV rentals, service animal rules and the hills: a practical guide to the Cincinnati Zoo.
 checked: October 2026
+image: cincinnati-zoo-elephant
+image_alt: An Asian elephant at the Cincinnati Zoo, its head dusted with hay, eating behind the cable fence of its habitat.
+image_credit: Photo: Patrick Cassidy
 ---
 The Cincinnati Zoo & Botanical Garden is about 45 minutes from Waynesville, and its Zoo Access for All program is one of the most complete I've found at any attraction. This guide is for families with a wheelchair or scooter user, a child or adult with sensory needs or autism, a service dog, or a medical routine to work around.
 

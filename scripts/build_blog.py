@@ -10,7 +10,12 @@ Each post is a Markdown file with front matter:
     slug: accessible-ohio-cincinnati-zoo
     summary: One or two sentences, under 160 characters. Used for search and link previews.
     checked: October 2026
+    image: cincinnati-zoo-elephant
+    image_alt: Describe the photo for screen-reader users.
+    image_credit: Photo: Patrick Cassidy
     ---
+The image fields are optional. "image" is a base name in img/blog/: the build expects
+<name>-800.jpg and <name>-1200.jpg (3:2) and uses <name>-og.jpg (1200x630) for link previews.
 Supported Markdown: ## and ### headings, paragraphs, - and 1. lists, > quotes,
 **bold**, *italic* and [links](https://...).
 """
@@ -49,7 +54,7 @@ foot = up(index[index.index('<footer class="foot">'):index.index("</footer>") + 
 head_top = re.sub(r'<meta name="description"[^>]*>\n', "", head_top)
 
 
-def page(title, description, path, body, og_type="website"):
+def page(title, description, path, body, og_type="website", og_image="img/patrick-640.jpg"):
     url = f"{SITE}/{path}"
     return (head_top
             + f'<meta name="description" content="{esc(description)}">\n<title>{esc(title)}</title>\n'
@@ -57,7 +62,7 @@ def page(title, description, path, body, og_type="website"):
             + f'<link rel="canonical" href="{url}">\n'
             + f'<meta property="og:type" content="{og_type}">\n<meta property="og:url" content="{url}">\n'
             + f'<meta property="og:title" content="{esc(title)}">\n'
-            + f'<meta property="og:image" content="{SITE}/img/patrick-640.jpg">\n'
+            + f'<meta property="og:image" content="{SITE}/{og_image}">\n'
             + f'<meta property="og:description" content="{esc(description)}">\n'
             + f'<link rel="alternate" type="application/rss+xml" title="Cassidy Travel blog" href="{SITE}/blog/feed.xml">\n'
             + up(fonts) + "</head>\n<body>\n\n" + hdr + '<main id="main">\n' + body
@@ -133,6 +138,12 @@ def read_post(path):
     if not m:
         raise SystemExit(f"{path.name}: missing front matter")
     meta = dict(line.split(": ", 1) for line in m.group(1).splitlines() if ": " in line)
+    if meta.get("image"):
+        for size in ("800", "1200", "og"):
+            if not (ROOT / "img" / "blog" / f'{meta["image"]}-{size}.jpg').exists():
+                raise SystemExit(f'{path.name}: missing img/blog/{meta["image"]}-{size}.jpg')
+        if not meta.get("image_alt"):
+            raise SystemExit(f"{path.name}: an image needs image_alt")
     for key in ("title", "date", "slug", "summary"):
         if not meta.get(key):
             raise SystemExit(f"{path.name}: front matter needs {key}")
@@ -154,6 +165,13 @@ for old in out_dir.glob("*.html"):
     old.unlink()
 
 for p in posts:
+    figure, og_image = "", "img/patrick-640.jpg"
+    if p.get("image"):
+        base = f'../img/blog/{p["image"]}'
+        credit = f'<figcaption>{esc(p["image_credit"])}</figcaption>' if p.get("image_credit") else ""
+        figure = (f'\n    <figure class="post-figure wrap narrow"><img src="{base}-1200.jpg" srcset="{base}-800.jpg 800w, {base}-1200.jpg 1200w" '
+                  f'sizes="(min-width: 860px) 820px, 100vw" width="1200" height="800" alt="{esc(p["image_alt"])}">{credit}</figure>')
+        og_image = f'img/blog/{p["image"]}-og.jpg'
     checked = f' Checked {esc(p["checked"])}; confirm before you go.' if p.get("checked") else ""
     body = f'''  <article class="post" aria-labelledby="post-h">
     <header class="page-hero">
@@ -163,7 +181,7 @@ for p in posts:
         <p class="post-meta">By Patrick Cassidy · <time datetime="{p["date"]}">{nice(p["day"])}</time></p>
         <p class="post-disclose">Cassidy Travel, independent travel advisor of Fora Travel.{checked}</p>
       </div>
-    </header>
+    </header>{figure}
     <div class="block"><div class="wrap narrow post-body">
 {p["html"]}
       <div class="post-cta">
@@ -173,7 +191,7 @@ for p in posts:
       </div>
     </div></div>
   </article>'''
-    (out_dir / f'{p["slug"]}.html').write_text(page(f'{p["title"]} | Cassidy Travel', p["summary"], f'blog/{p["slug"]}.html', body, "article"))
+    (out_dir / f'{p["slug"]}.html').write_text(page(f'{p["title"]} | Cassidy Travel', p["summary"], f'blog/{p["slug"]}.html', body, "article", og_image))
 
 cards = "\n".join(
     f'''      <li class="post-card"><a href="{p["slug"]}.html"><h2>{esc(p["title"])}</h2></a>
