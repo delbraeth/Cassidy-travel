@@ -10,7 +10,7 @@ image_credit: Photo: Patrick Cassidy
 ---
 The Cincinnati Zoo & Botanical Garden is about 45 minutes from Waynesville, and its Zoo Access for All program is one of the most complete I've found at any attraction. This guide is for families with a wheelchair or scooter user, a child or adult with sensory needs or autism, a service dog, or a medical routine to work around.
 
-It covers **parking and the entrance**, **getting around**, **sensory supports**, **restrooms and medical needs**, **service animals**, **touch points for blind and low-vision visitors**, and **what to ask before you go**. It's what I'd tell a friend, based on the Zoo's own accessibility page, not a promise that every path is perfect.
+It covers **parking and the entrance**, **getting around**, **sensory supports**, **restrooms and medical needs**, **service animals**, **ASL interpreting**, **touch points for blind and low-vision visitors**, and **what to ask before you go**. It's what I'd tell a friend, based on the Zoo's own accessibility page, not a promise that every path is perfect.
 
 ## Parking
 
@@ -70,6 +70,12 @@ If your child does better knowing exactly what will happen, the social narrative
 Service animals are welcome under the ADA. Emotional support and therapy animals aren't. A supervisor will check you in at the entrance and give you a Service Animal Map.
 
 Some areas are off limits to service animals to protect the Zoo's animals, including the animal contact areas (goat yard, tortoise yard, Roo Valley, giraffe feeding), the aviaries, Jungle Trails, Gorilla World and the Cheetah Encounter. You can still visit them without your dog: call Visitor Experience at 513-475-6198 to arrange it. A few more areas, such as Cat Canyon and Wolf Woods, are marked "sensitive" on the map; keep an eye on your dog there.
+
+## For Deaf and hard of hearing visitors
+
+In summer 2026, the Zoo partnered with Cincinnati State's Interpreter Training Program to provide ASL interpreters at some animal programs: the Cheetah Encounter, the Wings of Wonder bird demonstration and Blakely's Barnyard Bonanza, plus several animal chats (Asian elephant, black bear, sea otter, giraffe, and small-clawed otter and babirusa). It ran on one Saturday a month, June through September.
+
+This year's dates are over. If you're planning a summer visit, check with the Zoo in spring to see whether it returns, and plan your day around those dates.
 
 ## For blind and low-vision visitors
 
