@@ -10,7 +10,7 @@ image_credit: Photo: Patrick Cassidy
 ---
 The Cincinnati Zoo & Botanical Garden is about 45 minutes from Waynesville, and its Zoo Access for All program is one of the most complete I've found at any attraction. This guide is for families with a wheelchair or scooter user, a child or adult with sensory needs or autism, a service dog, or a medical routine to work around.
 
-It covers **parking**, **getting around**, **sensory supports**, **restrooms and medical needs**, **service animals**, **touch points for blind and low-vision visitors**, and **what to ask before you go**. It's what I'd tell a friend, based on the Zoo's own accessibility page, not a promise that every path is perfect.
+It covers **parking and the entrance**, **getting around**, **sensory supports**, **restrooms and medical needs**, **service animals**, **touch points for blind and low-vision visitors**, and **what to ask before you go**. It's what I'd tell a friend, based on the Zoo's own accessibility page, not a promise that every path is perfect.
 
 ## Parking
 
@@ -21,6 +21,14 @@ Go to the **Vine Lot (Lot A), 3427 Vine Street**. It has 20 dedicated accessible
 - **Need a rental wheelchair or ECV to get from the car to the gate?** Tell a parking attendant and they'll help you get one. The Zoo says availability isn't guaranteed, so reserve online ahead if you can.
 
 The Zoo's [parking map](https://cincinnatizoo.org/plan-your-adventure/#map) shows all the lots.
+
+## The entrance
+
+From my own visits:
+
+- The path to the entrance is **paved**, and there's an **elevator** up to the walkway that leads to it, so you don't need the stairs.
+- The gate is **open, with no turnstile or barrier**, so wheelchairs and scooters roll straight through.
+- Staff **scan your ticket or pass at the gate**. Have it ready on your phone or printed so you're not digging for it in the line.
 
 ## Getting around: plan for hills
 
@@ -67,7 +75,7 @@ Tactile statues and casts are spread through the Zoo: a baby elephant outside th
 
 ## What the Zoo's page doesn't cover
 
-I couldn't find details on what the main entrance is like with a wheelchair (whether the path from the lot is paved or brick, any slope, and whether there's a wide gate beside the turnstiles), or whether companions or caregivers get a ticket discount. If any of those matter for your visit, call Visitor Experience before you go, or ask me to check for you.
+I couldn't find whether companions or caregivers get a ticket discount. If any of those matter for your visit, call Visitor Experience before you go, or ask me to check for you.
 
 ## My take
 
