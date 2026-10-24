@@ -10,4 +10,11 @@
   <url>
     <loc>https://cassidytravel.org/guides.html</loc>
   </url>
+  <url>
+    <loc>https://cassidytravel.org/blog/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://cassidytravel.org/blog/accessible-ohio-cincinnati-zoo.html</loc>
+  </url>
 </urlset>
