@@ -7,7 +7,11 @@ checked: October 2026
 ---
 The Cincinnati Zoo & Botanical Garden is about 45 minutes from Waynesville, and its Zoo Access for All program is one of the most complete I've found at any attraction. This guide is for families with a wheelchair or scooter user, a child or adult with sensory needs or autism, a service dog, or a medical routine to work around.
 
-It covers **getting around**, **sensory supports**, **restrooms and medical needs**, **service animals**, **touch points for blind and low-vision visitors**, and **what to ask before you go**. It's what I'd tell a friend, based on the Zoo's own accessibility page, not a promise that every path is perfect.
+It covers **parking**, **getting around**, **sensory supports**, **restrooms and medical needs**, **service animals**, **touch points for blind and low-vision visitors**, and **what to ask before you go**. It's what I'd tell a friend, based on the Zoo's own accessibility page, not a promise that every path is perfect.
+
+## Parking
+
+There are accessible parking spaces in the Zoo's lots, but they fill up fast, especially on weekends and during special events. If you need one, arrive early, or plan a weekday visit.
 
 ## Getting around: plan for hills
 
@@ -54,7 +58,7 @@ Tactile statues and casts are spread through the Zoo: a baby elephant outside th
 
 ## What the Zoo's page doesn't cover
 
-I couldn't find details on accessible parking, the entrance surface, or whether companions or caregivers get a ticket discount. If any of those matter for your visit, call Visitor Experience before you go, or ask me to check for you.
+I couldn't find details on the entrance surface, or whether companions or caregivers get a ticket discount. If any of those matter for your visit, call Visitor Experience before you go, or ask me to check for you.
 
 ## My take
 
