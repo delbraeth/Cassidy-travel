@@ -77,7 +77,7 @@ Tactile statues and casts are spread through the Zoo: a baby elephant outside th
 
 ## What the Zoo's page doesn't cover
 
-I couldn't find whether companions or caregivers get a ticket discount. If that matters for your visit, call Visitor Experience before you go, or ask me to check for you.
+I couldn't find whether the Zoo offers a companion or caregiver ticket discount. In my experience, the places that do offer one usually limit it to paid caregivers, such as a personal care aide; parents, guardians and family members pay full price. If that matters for your visit, call Visitor Experience before you go, or ask me to check for you.
 
 ## My take
 
