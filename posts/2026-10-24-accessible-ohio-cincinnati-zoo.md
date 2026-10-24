@@ -67,7 +67,7 @@ Tactile statues and casts are spread through the Zoo: a baby elephant outside th
 
 ## What the Zoo's page doesn't cover
 
-I couldn't find details on the entrance surface, or whether companions or caregivers get a ticket discount. If any of those matter for your visit, call Visitor Experience before you go, or ask me to check for you.
+I couldn't find details on what the main entrance is like with a wheelchair (whether the path from the lot is paved or brick, any slope, and whether there's a wide gate beside the turnstiles), or whether companions or caregivers get a ticket discount. If any of those matter for your visit, call Visitor Experience before you go, or ask me to check for you.
 
 ## My take
 
