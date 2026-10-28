@@ -56,7 +56,12 @@ The most popular exhibits get crowded and loud. Pick up a sensory bag before you
 
 ## Service animals
 
-If you're bringing a service animal, call the aquarium ahead to ask which areas it can visit.
+Working service dogs are welcome, as the ADA defines them: dogs individually trained to do work or tasks for a person with a disability. Staff may ask two questions: whether the dog is required because of a disability, and what work or task it's trained to do.
+
+- Keep the dog harnessed, leashed or tethered, unless that gets in the way of its work or your disability prevents it. Then you control it by voice, signal or other means.
+- Service animals can't go into **Penguin Encounters**.
+- There's **no relief area** inside. You can step outside and come back in, so keep your ticket with you.
+- A dog that isn't under control will be asked to leave the area.
 
 ## My take
 
