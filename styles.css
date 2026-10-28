@@ -319,3 +319,5 @@ img{max-width:100%}
 @media (prefers-reduced-motion:no-preference){.cl .cl-card{transition:opacity .15s}}
 .cl h2{font-size:var(--step-3);font-weight:800;margin:0 0 6px}
 .cl .cl-alaska .lede{margin-top:10px}
+.cl .cl-more{background:var(--sun-soft);border-radius:12px;padding:20px 22px;display:grid;gap:10px;max-width:820px}
+.cl .cl-more ul{margin:0;padding-left:20px;display:grid;gap:6px}
