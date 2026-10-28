@@ -14,7 +14,7 @@ Kings Island is now part of Six Flags, so the official pages live at [sixflags.c
 
 ## Parking
 
-The accessible spaces are to the right of the entrance, in the rows closest to the Front Gate. They fill up, especially on Saturdays and on Halloween Haunt nights, so arrive early if you want one. Preferred Parking, also right next to the Front Gate, is the backup.
+The accessible spaces are to the right of the entrance, in the rows closest to the Front Gate. They fill up, especially on Saturdays and on Halloween Haunt nights, so arrive early if you want one. If they're full, the best option is to drop off at the Front Gate and have the driver park in a regular space. Preferred Parking near the gate costs extra.
 
 ## The entrance
 
