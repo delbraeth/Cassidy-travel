@@ -274,3 +274,48 @@ img{max-width:100%}
 .post-figure{margin-top:24px;margin-bottom:0}
 .post-figure img{display:block;width:100%;height:auto;border-radius:14px}
 .post-figure figcaption{margin-top:6px;font-size:.85rem;color:var(--ink-soft)}
+
+/* cruise line guide */
+.cl .cl-note{max-width:70ch;margin:0;color:var(--ink-soft);font-size:0.875rem}
+.cl .cl-tiers{display:flex;flex-wrap:wrap;gap:8px 18px;margin:14px 0 0;padding:0;list-style:none;font-size:0.875rem;color:var(--ink-soft)}
+.cl .cl-tiers b{color:var(--ink);font-variant-numeric:tabular-nums}
+.cl section{padding-block:32px}
+.cl .cl-picker{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
+.cl .cl-picker button{font:inherit;font-size:0.9375rem;border:1.5px solid var(--rule);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 14px;cursor:pointer}
+.cl .cl-picker button[aria-pressed="true"]{background:var(--lake);border-color:var(--lake);color:var(--on-lake);font-weight:700}
+.cl .cl-picker button:focus-visible, .cl .cl-tablewrap:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.cl #cl-count{font-size:0.875rem;color:var(--ink-soft);margin:4px 0 18px}
+.cl .cl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:16px}
+.cl .cl-card{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.cl .cl-card-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.cl .cl-card h3{font-family:var(--f-display);font-weight:800;font-size:1.375rem;margin:0;line-height:1.2}
+.cl .cl-price{font-family:var(--f-display);font-weight:800;font-size:1.125rem;color:var(--lake);letter-spacing:.06em;white-space:nowrap;font-variant-numeric:tabular-nums}
+.cl .cl-price .cl-off{color:var(--rule)}
+.cl .cl-vibe{margin:0;color:var(--ink-soft);font-size:0.9375rem}
+.cl .cl-card dl{margin:0;display:grid;gap:8px}
+.cl .cl-card dt{font-size:0.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.cl .cl-card dd{margin:0;font-size:0.9375rem}
+.cl .cl-know{background:var(--bg-alt);border-radius:8px;padding:8px 10px;font-size:0.875rem}
+.cl .cl-know b{color:var(--ink)}
+.cl .cl-cred{margin-top:auto;font-size:0.8125rem;color:var(--ink-soft);border-top:1px solid var(--rule);padding-top:10px}
+.cl .cl-cred b{color:var(--lake)}
+.cl .cl-tablewrap{overflow-x:auto;border:1px solid var(--rule);border-radius:12px;background:var(--surface);margin-top:14px}
+.cl table{border-collapse:collapse;min-width:1100px;font-size:0.875rem}
+.cl th, .cl td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+.cl thead th{font-family:var(--f-display);font-weight:800;font-size:0.9375rem;background:var(--sky);position:sticky;top:0}
+.cl tbody th{font-size:0.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);background:var(--surface);position:sticky;left:0;min-width:120px;border-right:1px solid var(--rule)}
+.cl td.cl-p{font-family:var(--f-display);font-weight:800;color:var(--lake);font-variant-numeric:tabular-nums}
+.cl tr:last-child th, .cl tr:last-child td{border-bottom:0}
+.cl .cl-alaska{background:var(--surface);border-block:1px solid var(--rule)}
+.cl .cl-ak-intro{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;align-items:start}
+.cl .cl-ak-intro figure{margin:0}
+.cl .cl-ak-intro img{border-radius:12px;display:block;width:100%;height:auto}
+.cl .cl-ak-intro figcaption{font-size:0.8125rem;color:var(--ink-soft);margin-top:6px}
+.cl .cl-ak-tips{margin:12px 0 0;padding-left:20px;display:grid;gap:6px}
+.cl .cl-ak-table{min-width:820px}
+.cl .cl-ak-table td:first-child{font-weight:700;white-space:nowrap}
+.cl .cl-yes{color:var(--lake);font-weight:700}
+@media (max-width:760px){.cl .cl-ak-intro{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:no-preference){.cl .cl-card{transition:opacity .15s}}
+.cl h2{font-size:var(--step-3);font-weight:800;margin:0 0 6px}
+.cl .cl-alaska .lede{margin-top:10px}

@@ -70,6 +70,7 @@ page = head + f'''<link rel="canonical" href="https://cassidytravel.org/guides.h
 {chr(10).join(body)}
   <section class="block"><div class="wrap narrow">
     <p><a class="btn" href="https://secure.foratravel.com/intake/AOaJHvy4Ll" target="_blank" rel="noopener">Start planning with Patrick{NT}</a></p>
+    <p style="margin-top:18px">Choosing a cruise line? <a href="cruise-lines.html">Compare ten cruise lines side by side</a>.</p>
     <p style="margin-top:18px">Know a guide I should add? Mention it on the planning form. <a class="back" href="index.html">Back to Cassidy Travel</a></p>
   </div></section>
 </main>

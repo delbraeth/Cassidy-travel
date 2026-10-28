@@ -231,7 +231,7 @@ items = "\n".join(f'''  <item>
 </rss>
 ''')
 
-urls = [("", "daily"), ("teams.html", None), ("guides.html", None), ("blog/", "weekly")] + [(f'blog/{p["slug"]}.html', None) for p in posts]
+urls = [("", "daily"), ("teams.html", None), ("guides.html", None), ("cruise-lines.html", None), ("blog/", "weekly")] + [(f'blog/{p["slug"]}.html', None) for p in posts]
 (ROOT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     + "".join(f"  <url>\n    <loc>{SITE}/{u}</loc>\n" + (f"    <changefreq>{c}</changefreq>\n" if c else "") + "  </url>\n" for u, c in urls)
     + "</urlset>\n")
