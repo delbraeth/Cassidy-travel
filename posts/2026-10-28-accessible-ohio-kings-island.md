@@ -58,6 +58,8 @@ Manual wheelchairs and electric wheelchairs with a sun canopy can be booked onli
 
 Kings Island earned the IBCCES Certified Autism Center designation in 2020, which means staff completed autism-specific training.
 
+**There are fireworks every night during the regular season.** If loud bangs are hard for someone in your group, ask Guest Services what time they start, and bring noise-canceling headphones or plan to leave before then.
+
 **Halloween Haunt can be overwhelming** for anyone with sensory needs. If you go, buy a **No-Boo necklace**. It tells the scare actors to leave you alone. Haunt runs select nights in the fall.
 
 ## For Deaf, hard of hearing, blind and low-vision visitors
