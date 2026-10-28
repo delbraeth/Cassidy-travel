@@ -36,11 +36,19 @@ Only two rides let you stay in your wheelchair: **the train** and **the Eiffel T
 
 The park's **Guest Accessibility Guide**, linked from its accessibility page, lists the requirements ride by ride. Read it with your crew before you go, so nobody waits for a ride they can't board.
 
-Staff help with the transfer where they can. At Phantom Theater, for example, they stop the moving loading line so you can get into the ride vehicle safely.
+Help with transfers:
+
+- **Transfer devices**, available on request, help lift you out of your wheelchair and into the ride at **Banshee, The Beast, The Racer, Mystic Timbers, The Bat and Woodstock Express**.
+- **Removable sides** on specific ride vehicles make it easier to get in at **Queen City Stunt Coaster** and **Snoopy's Soap Box Racers**. Ask the attendant for that car.
+- At **Phantom Theater**, staff stop the moving loading line so you can get into the ride vehicle safely.
 
 ## Restrooms
 
 Every restroom area has an accessible restroom with an **adult changing table**. That's rare at a big theme park, and it makes a long day much easier for families who need one.
+
+## First Aid and medication
+
+First Aid can store medical equipment and refrigerate medication for you, so you don't have to carry a cooler all day.
 
 ## Shows and dining
 
