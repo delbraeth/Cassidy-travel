@@ -38,6 +38,7 @@ The park's **Guest Accessibility Guide**, linked from its accessibility page, li
 
 Help with transfers:
 
+- **Wheelchair lifts** at **Banshee, Mystic Timbers and Orion** take you up to the second-story loading platform. Press the call button at the bottom of the lift for help.
 - **Transfer devices**, available on request, help lift you out of your wheelchair and into the ride at **Banshee, The Beast, The Racer, Mystic Timbers, The Bat and Woodstock Express**.
 - **Removable sides** on specific ride vehicles make it easier to get in at **Queen City Stunt Coaster** and **Snoopy's Soap Box Racers**. Ask the attendant for that car.
 - At **Phantom Theater**, staff stop the moving loading line so you can get into the ride vehicle safely.
@@ -76,7 +77,11 @@ The park offers Braille and large-print guides, and services for guests with hea
 
 ## Service animals
 
-Service animals are welcome. Some rides can't take them, so check the Guest Accessibility Guide and plan who waits with the dog.
+Service animals are welcome, but most rides can't take them. Someone in your group who isn't riding has to stay with the animal; staff aren't allowed to hold it for you.
+
+Service animals can ride **Phantom Theater: Opening Nightmare, the Eiffel Tower, the Kings Island & Miami Valley Railroad, the Grand Carousel, Kings Mills Antique Autos, Sally's Sea Plane and Snoopy's Junction**. They must be leashed and under your control, fit on the floor of the ride vehicle, and sit on the floor, not the seat.
+
+They're also welcome at shows in **the Festhaus, the Kings Island Theater, Peanuts Showplace, the Bandstand and the International Showplace**. They aren't allowed in water attractions.
 
 ## WinterFest
 
