@@ -26,7 +26,8 @@ Kings Island uses the **IBCCES Accessibility Card** for its Attraction Accessibi
 
 - Register free at [accessibilitycard.org](https://www.accessibilitycard.org/) **at least 48 hours before your visit**. A parent or guardian registers for a child.
 - The card lasts a year and works at other participating parks.
-- At each ride, the attendant gives you a return time that matches the current standby wait. When it's time, show your green access card and enter through the ride's exit lane.
+- When you arrive, take your IBCCES card to **Guest Services, at the far right of the ticket scanners**. They'll give you the park's **green card**.
+- At each ride, the attendant gives you a return time that matches the current standby wait. When it's time, show your green card and enter through the ride's exit lane.
 - The card is how you ask for accommodations; the park decides what it can offer on each ride, and it doesn't replace your ticket. Ask Guest Services how many companions can ride with you.
 
 ## Which rides work from a wheelchair
