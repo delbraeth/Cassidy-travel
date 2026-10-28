@@ -34,7 +34,7 @@ Kings Island uses the **IBCCES Accessibility Card** for its Attraction Accessibi
 
 Only two rides let you stay in your wheelchair: **the train** and **the Eiffel Tower**. Every other ride means transferring out of your chair, and each one has its own rules, such as being able to transfer on your own or brace yourself.
 
-The park's **Guest Accessibility Guide**, linked from its accessibility page, lists the requirements ride by ride. Read it with your crew before you go, so nobody waits for a ride they can't board.
+The park's [Guest Accessibility Guide](https://qr1.be/W5QK) lists the requirements ride by ride. Read it with your crew before you go, so nobody waits for a ride they can't board.
 
 Help with transfers:
 
@@ -91,4 +91,4 @@ WinterFest runs select nights from late November through December 31. Check the 
 
 For a wheelchair user, a good day at Kings Island comes down to planning. Register for the IBCCES card at least two days ahead, read the ride guide so you know which rides you can transfer onto, and arrive early on Saturdays and Haunt nights to get an accessible space near the gate. Adult changing tables at every restroom area make it one of the easier big parks for families who need them.
 
-Official page: [Kings Island accessibility](https://www.sixflags.com/kingsisland/accessibility). More guides like this: [Accessibility guides](../guides.html).
+Official pages: [Kings Island accessibility](https://www.sixflags.com/kingsisland/accessibility) and the [Guest Accessibility Guide](https://qr1.be/W5QK). More guides like this: [Accessibility guides](../guides.html).
