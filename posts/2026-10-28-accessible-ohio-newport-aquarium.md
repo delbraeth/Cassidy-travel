@@ -52,7 +52,7 @@ The most popular exhibits get crowded and loud. Pick up a sensory bag before you
 
 ## Restrooms
 
-There are family restrooms. I don't remember seeing an adult changing table, so ask Guest Services ahead of time if you need one.
+**Family and companion restrooms** are on the lower level, near the main elevator and Sharky's Café. I don't remember seeing an adult changing table, so ask Guest Services ahead of time if you need one.
 
 ## Service animals
 
