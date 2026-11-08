@@ -64,7 +64,7 @@ def page(title, description, path, body, og_type="website", og_image="img/patric
             + f'<meta property="og:title" content="{esc(title)}">\n'
             + f'<meta property="og:image" content="{SITE}/{og_image}">\n'
             + f'<meta property="og:description" content="{esc(description)}">\n'
-            + f'<link rel="alternate" type="application/rss+xml" title="Cassidy Travel blog" href="{SITE}/blog/feed.xml">\n'
+            + f'<link rel="alternate" type="application/rss+xml" title="Patrick Cassidy Travel blog" href="{SITE}/blog/feed.xml">\n'
             + up(fonts) + "</head>\n<body>\n\n" + hdr + '<main id="main">\n' + body
             + "\n</main>\n\n" + foot + '\n\n<script src="../site.js"></script>\n</body>\n</html>\n')
 
@@ -179,7 +179,7 @@ for p in posts:
         <p class="eyebrow"><a href="./">Blog</a></p>
         <h1 id="post-h">{esc(p["title"])}</h1>
         <p class="post-meta">By Patrick Cassidy · <time datetime="{p["date"]}">{nice(p["day"])}</time></p>
-        <p class="post-disclose">Cassidy Travel, independent travel advisor of Fora Travel.{checked}</p>
+        <p class="post-disclose">Patrick Cassidy Travel, independent travel advisor of Fora Travel.{checked}</p>
       </div>
     </header>{figure}
     <div class="block"><div class="wrap narrow post-body">
@@ -191,7 +191,7 @@ for p in posts:
       </div>
     </div></div>
   </article>'''
-    (out_dir / f'{p["slug"]}.html').write_text(page(f'{p["title"]} | Cassidy Travel', p["summary"], f'blog/{p["slug"]}.html', body, "article", og_image))
+    (out_dir / f'{p["slug"]}.html').write_text(page(f'{p["title"]} | Patrick Cassidy Travel', p["summary"], f'blog/{p["slug"]}.html', body, "article", og_image))
 
 cards = "\n".join(
     f'''      <li class="post-card"><a href="{p["slug"]}.html"><h2>{esc(p["title"])}</h2></a>
@@ -202,7 +202,7 @@ index_body = f'''  <section class="page-hero" aria-labelledby="page-h">
       <p class="eyebrow">Blog</p>
       <h1 id="page-h">Notes from a travel advisor who checks the details.</h1>
       <p class="lede">Accessibility guides to places near Waynesville and beyond, planning tips for cruises and theme parks, and what I learn along the way.</p>
-      <p class="cta-note">Cassidy Travel, independent travel advisor of Fora Travel. <a href="feed.xml">Subscribe by RSS</a>.</p>
+      <p class="cta-note">Patrick Cassidy Travel, independent travel advisor of Fora Travel. <a href="feed.xml">Subscribe by RSS</a>.</p>
     </div>
   </section>
   <section class="block" aria-label="Posts"><div class="wrap narrow">
@@ -210,7 +210,7 @@ index_body = f'''  <section class="page-hero" aria-labelledby="page-h">
 {cards}
     </ul>
   </div></section>'''
-(out_dir / "index.html").write_text(page("Blog | Cassidy Travel", "Accessibility guides, cruise and theme park planning tips, and travel notes from Cassidy Travel in Waynesville, Ohio.", "blog/", index_body))
+(out_dir / "index.html").write_text(page("Blog | Patrick Cassidy Travel", "Accessibility guides, cruise and theme park planning tips, and travel notes from Patrick Cassidy Travel in Waynesville, Ohio.", "blog/", index_body))
 
 items = "\n".join(f'''  <item>
     <title>{esc(p["title"])}</title>
@@ -222,9 +222,9 @@ items = "\n".join(f'''  <item>
 (out_dir / "feed.xml").write_text(f'''<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-  <title>Cassidy Travel blog</title>
+  <title>Patrick Cassidy Travel blog</title>
   <link>{SITE}/blog/</link>
-  <description>Accessibility guides and planning tips from Cassidy Travel, independent travel advisor of Fora Travel.</description>
+  <description>Accessibility guides and planning tips from Patrick Cassidy Travel, independent travel advisor of Fora Travel.</description>
   <language>en-us</language>
 {items}
 </channel>

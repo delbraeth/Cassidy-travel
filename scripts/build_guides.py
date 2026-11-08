@@ -14,9 +14,9 @@ NT = '<span class="sr-only"> (opens in a new tab)</span>'
 esc = html.escape
 
 head = index[:index.index('<link rel="canonical"')]
-head = head.replace("<title>Cassidy Travel</title>", "<title>Accessibility Guides</title>")
+head = head.replace("<title>Patrick Cassidy Travel</title>", "<title>Accessibility Guides</title>")
 head = head.replace(
-    'content="Cassidy Travel: cruises, resorts, theme parks and family getaways planned from Waynesville, Ohio, with a focus on accessible and multi-generational travel."',
+    'content="Patrick Cassidy Travel: cruises, resorts, theme parks and family getaways planned from Waynesville, Ohio, with a focus on accessible and multi-generational travel."',
     'content="Links to official accessibility guides for attractions near Waynesville, Ohio, regional getaways, Orlando, cruise lines, resorts and airports."',
 )
 hdr = index[index.index('<a class="skip"'):index.index('<main id="main">')]
@@ -47,7 +47,7 @@ for s in data["sections"]:
 page = head + f'''<link rel="canonical" href="https://cassidytravel.org/guides.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cassidytravel.org/guides.html">
-<meta property="og:title" content="Accessibility Guides | Cassidy Travel">
+<meta property="og:title" content="Accessibility Guides | Patrick Cassidy Travel">
 <meta property="og:image" content="https://cassidytravel.org/img/patrick-640.jpg">
 <meta property="og:description" content="Official accessibility guides for attractions near Waynesville, regional getaways, Orlando, cruise lines, resorts and airports.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,7 +71,7 @@ page = head + f'''<link rel="canonical" href="https://cassidytravel.org/guides.h
   <section class="block"><div class="wrap narrow">
     <p><a class="btn" href="https://secure.foratravel.com/intake/AOaJHvy4Ll" target="_blank" rel="noopener">Start planning with Patrick{NT}</a></p>
     <p style="margin-top:18px">Choosing a cruise line? <a href="cruise-lines.html">Compare ten cruise lines side by side</a>.</p>
-    <p style="margin-top:18px">Know a guide I should add? Mention it on the planning form. <a class="back" href="index.html">Back to Cassidy Travel</a></p>
+    <p style="margin-top:18px">Know a guide I should add? Mention it on the planning form. <a class="back" href="index.html">Back to Patrick Cassidy Travel</a></p>
   </div></section>
 </main>
 

@@ -6,7 +6,7 @@ summary: Kings Island's ride access program, the IBCCES card, parking, rides, re
 checked: October 2026
 image: kings-island-winterfest
 image_alt: Patrick Cassidy in his wheelchair with a companion in front of the Kings Island WinterFest sign, framed by a giant holiday wreath.
-image_credit: Photo: Cassidy Travel
+image_credit: Photo: Patrick Cassidy Travel
 ---
 Kings Island in Mason is about 30 minutes from Waynesville, which makes it the big theme park closest to home. I have a season pass, so this guide mixes the park's official information with what I've seen on my own visits. This guide covers **parking and the entrance**, **the ride access program**, **which rides work for wheelchair users**, **restrooms**, **shows and dining**, **rentals**, **sensory supports**, and **Halloween Haunt and WinterFest**.
 
