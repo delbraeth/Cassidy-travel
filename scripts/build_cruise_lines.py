@@ -15,9 +15,9 @@ DESC = "Compare ten cruise lines side by side: who each suits, price tier, what'
 URL = "https://cassidytravel.org/cruise-lines.html"
 
 head = index[:index.index('<link rel="canonical"')]
-head = head.replace("<title>Patrick Cassidy Travel</title>", f"<title>{TITLE} | Patrick Cassidy Travel</title>")
+head = head.replace("<title>Patrick Cassidy Travel | Accessible Travel Advisor in Ohio</title>", f"<title>{TITLE} | Patrick Cassidy Travel</title>")
 head = head.replace(
-    'content="Patrick Cassidy Travel: cruises, resorts, theme parks and family getaways planned from Waynesville, Ohio, with a focus on accessible and multi-generational travel."',
+    'content="Accessible travel advisor in Waynesville, Ohio: wheelchair-accessible cruises, Disney and resorts, plus autism-friendly and multigenerational vacations."',
     f'content="{DESC}"',
 )
 hdr = index[index.index('<a class="skip"'):index.index('<main id="main">')]

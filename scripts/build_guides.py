@@ -14,9 +14,9 @@ NT = '<span class="sr-only"> (opens in a new tab)</span>'
 esc = html.escape
 
 head = index[:index.index('<link rel="canonical"')]
-head = head.replace("<title>Patrick Cassidy Travel</title>", "<title>Accessibility Guides</title>")
+head = head.replace("<title>Patrick Cassidy Travel | Accessible Travel Advisor in Ohio</title>", "<title>Accessibility Guides</title>")
 head = head.replace(
-    'content="Patrick Cassidy Travel: cruises, resorts, theme parks and family getaways planned from Waynesville, Ohio, with a focus on accessible and multi-generational travel."',
+    'content="Accessible travel advisor in Waynesville, Ohio: wheelchair-accessible cruises, Disney and resorts, plus autism-friendly and multigenerational vacations."',
     'content="Links to official accessibility guides for attractions near Waynesville, Ohio, regional getaways, Orlando, cruise lines, resorts and airports."',
 )
 hdr = index[index.index('<a class="skip"'):index.index('<main id="main">')]
