@@ -104,8 +104,13 @@ def markdown(src):
         s = line.strip()
         m_ul = re.match(r"[-*] (.+)", s)
         m_ol = re.match(r"\d+\. (.+)", s)
+        m_img = re.match(r'!\[([^\]]+)\]\((\S+?)(?: "([^"]+)")?\)$', s)
         if not s:
             flush()
+        elif m_img:
+            flush()
+            cap = f"<figcaption>{inline(m_img.group(3))}</figcaption>" if m_img.group(3) else ""
+            out.append(f'<figure class="post-inline"><img src="{m_img.group(2)}" alt="{esc(m_img.group(1))}" loading="lazy">{cap}</figure>')
         elif s.startswith("### "):
             flush()
             out.append(f'<h3 id="{slugify(s[4:])}">{inline(s[4:])}</h3>')

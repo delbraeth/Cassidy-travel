@@ -274,6 +274,10 @@ img{max-width:100%}
 .post-figure{margin-top:24px;margin-bottom:0}
 .post-figure img{display:block;width:100%;height:auto;border-radius:14px}
 .post-figure figcaption{margin-top:6px;font-size:.85rem;color:var(--ink-soft)}
+.post-inline{margin:22px 0}
+.post-inline img{display:block;width:100%;max-width:560px;height:auto;border-radius:12px}
+.post-inline img[src*="accessibility-services"]{max-width:380px}
+.post-inline figcaption{margin-top:6px;font-size:.85rem;color:var(--ink-soft)}
 
 /* cruise line guide */
 .cl .cl-note{max-width:70ch;margin:0;color:var(--ink-soft);font-size:0.875rem}
