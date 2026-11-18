@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Accessible travel advisor in Waynesville, Ohio: wheelchair-accessible cruises, Disney and resorts, plus autism-friendly and multigenerational vacations.">
 <title>Patrick Cassidy Travel | Accessible Travel Advisor in Ohio</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2716%27 fill=%27%230B7A85%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-family=%27sans-serif%27 font-size=%2717%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EC%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/brand/apple-touch-icon.png">
 <link rel="canonical" href="https://cassidytravel.org/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cassidytravel.org/">
@@ -18,6 +19,8 @@
  "@type": "TravelAgency",
  "name": "Patrick Cassidy Travel",
  "url": "https://cassidytravel.org/",
+ "telephone": "+1-513-897-3457",
+ "logo": "https://cassidytravel.org/img/brand/icon-512.png",
  "image": "https://cassidytravel.org/img/patrick-640.jpg",
  "description": "Accessible travel advisor in Waynesville, Ohio, planning wheelchair-accessible cruises, Disney trips and resorts, autism-friendly and sensory-friendly travel, and multigenerational family vacations.",
  "address": {
@@ -74,7 +77,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -83,22 +86,34 @@
 
 <header class="head">
   <div class="wrap">
-    <a class="mark" href="#top" id="top"><b>Patrick Cassidy Travel</b><span>Cruises · Resorts · Theme parks · Group travel</span></a>
-    <nav aria-label="Sections"><ul class="nav">
-      <li><a href="#sales">Sales</a></li>
-      <li><a href="#favorites">Favorites</a></li>
-      <li><a href="#seasonal">Plan ahead</a></li>
-      <li><a href="#drive">Drive trips</a></li>
-      <li><a href="#quiz">Trip match</a></li>
-      <li><a href="#finder">Accessible resorts</a></li>
-      <li><a href="guides.html">Access guides</a></li>
-      <li><a href="cruise-lines.html">Cruise guide</a></li>
-      <li><a href="blog/">Blog</a></li>
-      <li><a href="#about">About</a></li>
+    <a class="mark" href="#top" id="top"><svg class="mark-icon" viewBox="0 0 100 100" aria-hidden="true"><defs><clipPath id="mk"><circle cx="50" cy="50" r="46"/></clipPath></defs><circle cx="50" cy="50" r="46" fill="#E3F4F7"/><g clip-path="url(#mk)"><circle cx="50" cy="58" r="20" fill="#FFD66B"/><rect x="0" y="58" width="100" height="50" fill="#0B7A85"/><path d="M0 70 Q12 65 25 70 T50 70 T75 70 T100 70" stroke="#E3F4F7" stroke-width="3.5" fill="none"/><path d="M0 82 Q12 77 25 82 T50 82 T75 82 T100 82" stroke="#E3F4F7" stroke-width="3.5" fill="none" opacity=".7"/></g><circle cx="50" cy="50" r="46" fill="none" stroke="#0B7A85" stroke-width="4"/></svg><span class="mark-text"><b>Patrick Cassidy</b><span>Travel</span></span></a>
+    <nav aria-label="Main"><ul class="nav">
+      <li><a href="#how">How it works</a></li>
+      <li><a href="cruise-lines.html">Cruises</a></li>
+      <li><a href="accessible-disney-world.html">Disney</a></li>
+      <li><a href="guides.html"><span class="w-long">Accessibility guides</span><span class="w-short">Guides</span></a></li>
+      <li class="hide-sm"><a href="#about">About</a></li>
+      <li class="nav-more"><details><summary>More</summary><ul>
+        <li><a href="#sales">Current offers</a></li>
+        <li><a href="#favorites">Family favorites</a></li>
+        <li><a href="#seasonal">What to book now</a></li>
+        <li><a href="#drive">Drive trips</a></li>
+        <li><a href="#quiz">Trip match</a></li>
+        <li><a href="#finder">Accessible resorts</a></li>
+        <li><a href="accessible-cruises.html">Accessible cruises</a></li>
+        <li><a href="teams.html">Team travel</a></li>
+        <li><a href="blog/">Blog</a></li>
+        <li class="show-sm"><a href="#about">About</a></li>
+      </ul></details></li>
     </ul></nav>
-    <div class="toggles" role="group" aria-label="Display options">
-      <span class="has-tip"><button class="pill" id="t-calm" type="button" aria-pressed="false" aria-describedby="tip-calm">Calm mode</button><button class="tip-q" id="q-calm" type="button" aria-label="What does Calm mode do?" aria-expanded="false" aria-controls="tip-calm">?</button><span class="tip" id="tip-calm" role="tooltip">Stops animation and softens colors</span></span>
-      <button class="pill" id="t-large" type="button" aria-pressed="false">Larger text</button>
+    <div class="head-actions">
+      <a class="btn btn-sm" href="sms:+15138973457">Text Patrick</a>
+      <details class="display"><summary aria-label="Display options"><span class="w-long">Display</span><span class="w-short" aria-hidden="true">Aa</span></summary>
+        <div class="toggles" role="group" aria-label="Display options">
+          <span class="has-tip"><button class="pill" id="t-calm" type="button" aria-pressed="false" aria-describedby="tip-calm">Calm mode</button><button class="tip-q" id="q-calm" type="button" aria-label="What does Calm mode do?" aria-expanded="false" aria-controls="tip-calm">?</button><span class="tip" id="tip-calm" role="tooltip">Stops animation and softens colors</span></span>
+          <button class="pill" id="t-large" type="button" aria-pressed="false">Larger text</button>
+        </div>
+      </details>
     </div>
   </div>
 </header>
@@ -107,17 +122,17 @@
   <section class="hero" aria-labelledby="hero-h">
     <div class="wrap">
       <div>
-        <p class="eyebrow" id="today-date">Today</p>
-        <h1 id="hero-h">Trips planned around the details that matter.</h1>
-        <p class="lede">Beach weekends, cruises, all-inclusives and theme park trips, planned from Waynesville, Ohio, between Dayton and Cincinnati. I'm especially good with trips that have more moving parts: three generations, little kids, sports teams, and travelers who need an accessible room or a calmer pace.</p>
+        <p class="eyebrow">Independent travel advisor · Waynesville, Ohio</p>
+        <h1 id="hero-h">Your trip, planned together, down to the details.</h1>
+        <p class="lede">Tell me who's going and what a great trip looks like for each of them. We'll work through the options together, you choose, and I'll take care of the bookings and the details. Cruises, Disney and theme parks, all-inclusives and group trips, from Waynesville, Ohio, between Dayton and Cincinnati.</p>
         <div class="cta-row">
-          <a class="btn" href="https://secure.foratravel.com/intake/AOaJHvy4Ll" target="_blank" rel="noopener">Start planning with Patrick<span class="sr-only"> (opens in a new tab)</span></a>
-          <a href="#quiz">Not sure where to start? Take the trip match</a>
+          <a class="btn" href="sms:+15138973457">Text Patrick to start planning</a>
+          <a href="https://secure.foratravel.com/intake/AOaJHvy4Ll" target="_blank" rel="noopener">Prefer a form? Start online<span class="sr-only"> (opens in a new tab)</span></a>
         </div>
-        <p class="cta-note">"Start planning" opens a short form on Fora Travel, my host agency, in a new tab. I read every one and reply personally.</p>
+        <p class="cta-note">Text <b>513-897-3457</b> with who's going and roughly when, and we'll set up a time to talk. The online form is on Fora Travel, my host agency. Either way, I reply personally. Not sure where to start? <a href="#quiz">Take the trip match</a>.</p>
         <p class="cost"><b>What does it cost?</b> I don't charge a planning fee for vacations. I'm paid a commission by the cruise line, resort or tour company you book with. You get one person who knows your trip from start to finish, and someone to call if plans change. <a href="teams.html">Team and club trips</a> have a coordination fee, quoted up front.</p>
         <p class="cred-line">Trained and certified with Disney, Holland America, Princess, Royal Caribbean, Carnival, Viking and more · Certified Autism Travel Professional · KultureCity Sensory Inclusive</p>
-        <div class="meet"><img src="img/patrick-320.jpg" width="64" height="64" alt=""><p>I'm Patrick. I've served as meet director for one of the country's largest Para swimming meets, and I travel with a power wheelchair myself, so I ask the questions a brochure skips. <a href="#about">More about me</a></p></div>
+        <div class="meet"><img src="img/patrick-320.jpg" width="64" height="64" alt=""><p>I'm Patrick. I bring a career of project management, including directing one of the country's largest Para swimming meets, to every trip we plan. <a href="#about">More about me</a></p></div>
       </div>
       <aside class="today" aria-labelledby="today-h">
         <div>
@@ -135,12 +150,29 @@
     </div>
   </section>
 
+  <section class="block how" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-h">How we'll plan your trip together</h2>
+        <p>You know your family and what makes a trip good. I know the ships, resorts and parks, and the questions to ask. We put the two together.</p>
+      </div>
+      <ol class="steps">
+        <li><span class="step-n" aria-hidden="true">1</span><h3>We talk</h3><p>A free call or a few texts about who's going, what a good trip looks like for each person, your dates and your budget.</p></li>
+        <li><span class="step-n" aria-hidden="true">2</span><h3>You get options</h3><p>I come back with two or three researched choices, what each one costs, and what I checked: the room, the transfers, the pace of the days.</p></li>
+        <li><span class="step-n" aria-hidden="true">3</span><h3>You decide, I book</h3><p>Nothing is booked until you say yes. Then I make the reservations and confirm the details in writing.</p></li>
+        <li><span class="step-n" aria-hidden="true">4</span><h3>I'm with you through the trip</h3><p>Questions before you go or a change of plans while you're away: you have one person to text. I check in when you're home.</p></li>
+      </ol>
+      <div class="how-cta"><a class="btn" href="sms:+15138973457">Text Patrick: 513-897-3457</a><span>No planning fee for vacations.</span></div>
+    </div>
+  </section>
+
   <section class="block" id="who" aria-labelledby="who-h">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Who I plan for</p>
         <h2 id="who-h">Start with who's going</h2>
-        <p>I'm an accessible travel advisor in Waynesville, Ohio, planning cruises, Disney trips and resort vacations for families across Dayton, Cincinnati and Columbus, especially multigenerational groups and travelers who use a wheelchair or have autism or sensory needs. See my guides to <a href="accessible-cruises.html">wheelchair-accessible cruises</a> and <a href="accessible-disney-world.html">accessible Disney World trips</a>.</p>
+        <p>Every trip starts with the people on it. As an accessible travel advisor in Waynesville, Ohio, I plan cruises, Disney trips and resort vacations with families across Dayton, Cincinnati and Columbus, from multigenerational groups to travelers who use a wheelchair or have autism or sensory needs. See my guides to <a href="accessible-cruises.html">wheelchair-accessible cruises</a> and <a href="accessible-disney-world.html">accessible Disney World trips</a>.</p>
       </div>
       <div class="who-grid">
         <a class="who" href="#favorites"><h3>Families and grandparents</h3><p>Multigenerational trips: beach condos, Orlando, lake houses, and cruises with your cabins close together.</p><span class="go">See family favorites</span></a>
@@ -304,7 +336,8 @@
         <div class="bio">
           <img class="headshot" src="img/patrick-320.jpg" srcset="img/patrick-320.jpg 320w, img/patrick-640.jpg 640w" sizes="200px" width="320" height="399" alt="Patrick Cassidy" loading="lazy">
           <p>I'm Patrick Cassidy, an independent travel advisor in Waynesville, Ohio, between Dayton and Cincinnati. I plan cruises, resort stays, theme park trips and family getaways. My specialty is the trips with more moving parts: three generations on one vacation, families with young kids, teams on the road, and travelers who need an accessible room or a calmer pace.</p>
-          <p>I've served as meet director for the Bill Keating, Jr. Memorial Cincinnati Para-Swimming Open, one of the largest Para swimming meets in the country, and I travel with a power wheelchair myself. So I ask the questions a brochure skips, then I confirm the answers before you book.</p>
+          <p>Planning a trip with you draws on a career of project management, including serving as meet director for the Bill Keating, Jr. Memorial Cincinnati Para-Swimming Open, one of the largest Para swimming meets in the country. I use a power wheelchair myself, so I ask the questions a brochure skips, then confirm the answers before you book.</p>
+          <p>I'll always tell you what I know, what I've checked and what I'm still waiting to hear. The choices are yours.</p>
         </div>
         <div>
           <div class="cred-group">
@@ -327,20 +360,20 @@
               <li><span class="cname">Completed Sandals Elite Advisor training</span><span class="cmeta">Sandals and Beaches Resorts · 2026</span></li>
               <li><span class="cname">Universal Orlando Resort Specialist and Universal Studios Hollywood Specialist</span><span class="cmeta">UniversalandU · 2026</span></li>
               <li><span class="cname">Patrick Cassidy is a graduate of the College of Disney Knowledge and has attained a special knowledge of Disney Destinations.</span></li>
-              <li><span class="cname">Certified Destination Specialist: SeaWorld, Busch Gardens, Aquatica, Discovery Cove, Adventure Island, Water Country USA and Sesame Place</span><span class="cmeta">United Parks &amp; Resorts Travel Advisor Training · 2026 · Certificate xxa9rwibub</span></li>
+              <li><span class="cname">Certified Destination Specialist: SeaWorld, Busch Gardens, Aquatica, Discovery Cove, Adventure Island, Water Country USA and Sesame Place</span><span class="cmeta">United Parks &amp; Resorts Travel Advisor Training · 2026</span></li>
             </ul>
           </div>
           <div class="cred-group">
             <h3>Destinations</h3>
             <ul class="creds">
-              <li><span class="cname">Nashville Expert</span><span class="cmeta">Nashville Convention &amp; Visitors Corp Travel Trade Training · Certificate axyhtmxxsf · valid through October 2027</span></li>
+              <li><span class="cname">Nashville Expert</span><span class="cmeta">Nashville Convention &amp; Visitors Corp Travel Trade Training · valid through October 2027</span></li>
               <li><span class="cname">Official Mexican Caribbean Ambassador: Cancun, Playa del Carmen, Tulum, Cozumel, Isla Mujeres, Holbox and more</span><span class="cmeta">Mexican Caribbean Travel Advisor Program · 2026</span></li>
             </ul>
           </div>
           <div class="cred-group">
             <h3>Accessibility and autism</h3>
             <ul class="creds">
-              <li><span class="cname">Certified Autism Travel Professional (CATP)</span><span class="cmeta">IBCCES · Credential CATP26431292 · valid through 2028</span></li>
+              <li><span class="cname">Certified Autism Travel Professional (CATP)</span><span class="cmeta">IBCCES · valid through 2028</span></li>
               <li><span class="cname">Certified Accessible Travel Advocate (CATA)</span><span class="cmeta">Special Needs Group · 2026</span></li>
               <li><span class="cname">KultureCity Sensory Accessibility/Inclusive Certification, Travel Training</span><span class="cmeta">KultureCity · 2026</span></li>
             </ul>
@@ -364,8 +397,9 @@
       <p style="margin-top:10px">Offers are subject to each supplier's terms and availability. Accessibility details are confirmed with the resort or cruise line before booking.</p>
     </div>
     <div>
-      <p>Ready to plan a trip? There's no planning fee for vacations.</p>
-      <p style="margin-top:10px"><a class="btn" href="https://secure.foratravel.com/intake/AOaJHvy4Ll" target="_blank" rel="noopener">Start planning with Patrick<span class="sr-only"> (opens in a new tab)</span></a></p>
+      <p>Ready to plan a trip together? There's no planning fee for vacations.</p>
+      <p style="margin-top:10px"><a class="btn" href="sms:+15138973457">Text Patrick: 513-897-3457</a></p>
+      <p style="margin-top:10px;font-size:.9rem">Prefer a form? <a href="https://secure.foratravel.com/intake/AOaJHvy4Ll" target="_blank" rel="noopener">Start online<span class="sr-only"> (opens in a new tab)</span></a>.</p>
       <p style="margin-top:10px;font-size:.9rem"><a href="guides.html">Accessibility guides</a> · <a href="accessible-cruises.html">Accessible cruises</a> · <a href="accessible-disney-world.html">Accessible Disney World</a> · Or read more on <a href="https://www.foratravel.com/advisor/patrick-cassidy" target="_blank" rel="noopener">my Fora advisor profile<span class="sr-only"> (opens in a new tab)</span></a>.</p>
       <p style="margin-top:10px;font-size:.9rem">Follow along: <a href="https://www.facebook.com/patrickcassidytravel" target="_blank" rel="noopener">Facebook<span class="sr-only"> (opens in a new tab)</span></a> · <a href="https://www.instagram.com/patrickcassidytravel/" target="_blank" rel="noopener">Instagram<span class="sr-only"> (opens in a new tab)</span></a> · <a href="https://x.com/PatrickCassidy" target="_blank" rel="noopener">X<span class="sr-only"> (opens in a new tab)</span></a></p>
     </div>
@@ -387,7 +421,7 @@
   var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   function parse(s){ var p = s.split("-").map(Number); return new Date(p[0], p[1]-1, p[2]); }
   function daysUntil(s){ return Math.round((parse(s) - today) / 86400000); }
-  document.getElementById("today-date").textContent = today.toLocaleDateString("en-US", {weekday:"long", month:"long", day:"numeric", year:"numeric"});
+  /* hero date removed 2026-11-18: the eyebrow is static now */
 
   /* sales */
   var live = [];
@@ -411,7 +445,10 @@
     board.appendChild(li);
   });
   if (!live.length){
-    var e = document.createElement("li"); e.innerHTML = '<div class="what" style="grid-column:1/-1"><span class="title">No offers running right now. Check back tomorrow.</span></div>'; board.appendChild(e);
+    /* no live offers (or the feed failed): hide the section and its menu link rather than show an empty board */
+    document.getElementById("sales").hidden = true;
+    Array.prototype.forEach.call(document.querySelectorAll('.nav a[href="#sales"]'), function(a){ a.closest("li").hidden = true; });
+    Array.prototype.forEach.call(document.querySelectorAll('.who[href="#sales"]'), function(a){ a.href = "#how"; a.querySelector(".go").textContent = "See how we plan together"; });
   }
   /* split-flap settle, once on load */
   if (!root.hasAttribute("data-calm")){
@@ -675,9 +712,9 @@
   else if (dow === 3){
     var nLive = live.filter(function(x){ return x.st.order <= 1 || x.st.order === 3; }).length, nSoon = live.filter(function(x){ return x.st.order === 2; }).length;
     var next = live.filter(function(x){ return x.st.order <= 1; })[0];
-    h.textContent = live.length ? nLive + (nLive === 1 ? " offer" : " offers") + " running, " + nSoon + " opening soon" : "New offers are on the way";
+    h.textContent = live.length ? nLive + (nLive === 1 ? " offer" : " offers") + " running, " + nSoon + " opening soon" : "Ask about offers for your dates";
     body.textContent = next ? (next.s.brand + ": " + next.s.title.toLowerCase().replace(/^./, function(c){return c;}) + ". " + (next.st.n === "Today" ? "Ends today." : "Ends in " + next.st.n + " " + next.st.unit + ".")) : "Ask me what's on sale for your dates.";
-    link.href = "#sales"; link.textContent = "See the sales board";
+    if (live.length){ link.href = "#sales"; link.textContent = "See the sales board"; } else { link.href = "sms:+15138973457"; link.textContent = "Text Patrick"; }
   }
   else if (dow === 4){ var sc = SEASON[today.getMonth()][0]; h.textContent = sc.t; body.textContent = sc.b; link.href = "#seasonal"; link.textContent = "See this month's plan-ahead list"; }
   else if (dow === 5){ var near = DEST.filter(function(d){ return d.ring === 0; }); var pickD = near[Math.floor(doy/7) % near.length]; h.textContent = "This weekend: " + pickD.name; body.textContent = pickD.note; link.href = "#drive"; link.textContent = "More trips under 90 minutes"; }

@@ -191,7 +191,7 @@ for p in posts:
 {p["html"]}
       <div class="post-cta">
         <p>Planning a trip like this? There's no planning fee for vacations.</p>
-        <p><a class="btn" href="{INTAKE}" target="_blank" rel="noopener">Start planning with Patrick{NT}</a></p>
+        <p class="cta-row"><a class="btn" href="sms:+15138973457">Text Patrick: 513-897-3457</a> <a href="{INTAKE}" target="_blank" rel="noopener">Prefer a form? Start online{NT}</a></p>
         <p><a class="back" href="./">More from the blog</a> · <a href="../guides.html">Accessibility guides</a></p>
       </div>
     </div></div>
